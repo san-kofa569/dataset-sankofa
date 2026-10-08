@@ -10,6 +10,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Elms+Sans:wght@300..700&family=Fira+Sans+Extra+Condensed:wght@700&display=swap">
 <style>
+/* Chiffres de Fira Sans (licence OFL), embarqués et réduits aux dix chiffres : le « 1 » d’Elms se lit « l » en petit corps.
+   Graisses décalées d’un cran : Fira est plus dense qu’Elms à graisse égale. */
+@font-face { font-family: "Chiffres"; font-weight: 300 449; font-display: swap; unicode-range: U+30-39; src: url(data:font/woff2;base64,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) format("woff2"); }
+@font-face { font-family: "Chiffres"; font-weight: 450 549; font-display: swap; unicode-range: U+30-39; src: url(data:font/woff2;base64,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) format("woff2"); }
+@font-face { font-family: "Chiffres"; font-weight: 550 649; font-display: swap; unicode-range: U+30-39; src: url(data:font/woff2;base64,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) format("woff2"); }
+@font-face { font-family: "Chiffres"; font-weight: 650 900; font-display: swap; unicode-range: U+30-39; src: url(data:font/woff2;base64,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) format("woff2"); }
 /* Mise en page « la cour » : navigation à gauche, fil du jour au centre, pagne collectif à droite.
    Sous 1240 px le pagne rejoint le fil ; sous 860 px, une colonne et une barre d'onglets en verre.
    Les séances (parler, écouter, apprendre, s'inscrire) passent en plein écran, centrées.
@@ -33,8 +39,8 @@
      Fira Sans Extra Condensed (Carrois, pensée pour les petits écrans) et Elms Sans (Amarachi Nwauwa, Abuja)
      couvrent toutes deux ɛ ɩ ʋ ã ẽ ĩ õ ũ : le mooré ne change jamais de police. */
   --f-titre: "Fira Sans Extra Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
-  --f-texte: "Elms Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --f-moore: "Elms Sans", "Noto Sans", system-ui, sans-serif;
+  --f-texte: "Chiffres", "Elms Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --f-moore: "Chiffres", "Elms Sans", "Noto Sans", system-ui, sans-serif;
   --r-sm: 8px; --r-md: 14px; --r-lg: 20px;
   --doux: cubic-bezier(.22, 1, .36, 1); --ressort: cubic-bezier(.34, 1.45, .64, 1);
   color-scheme: light;
@@ -84,6 +90,7 @@ svg, canvas { display: block; max-width: 100%; }
 h1, h2, h3, h4, p { margin: 0; }
 :focus-visible { outline: 2px solid var(--or); outline-offset: 3px; }
 main:focus { outline: none; }
+p, small, .aide, .chapo { text-wrap: pretty; }
 .sr { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 ::selection { background: var(--griot-tint-2); }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
@@ -107,7 +114,7 @@ main:focus { outline: none; }
 .moore { font-family: var(--f-moore); }
 .meta { font: 500 13px/1.3 var(--f-texte); color: var(--muet); letter-spacing: .01em; font-variant-numeric: tabular-nums; }
 .exemple { font: 600 12px/1.3 var(--f-texte); color: var(--or-texte); letter-spacing: .02em; }
-.lien { all: unset; cursor: pointer; color: var(--titre); font-weight: 600; text-decoration: underline; text-decoration-color: var(--or); text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
+.lien { all: unset; cursor: pointer; color: var(--titre); font-weight: 600; text-decoration: underline; text-decoration-color: var(--or); text-decoration-thickness: 1.5px; text-underline-offset: .32em; }
 .lien:focus-visible { outline: 2px solid var(--or); outline-offset: 3px; border-radius: 4px; }
 
 /* ---------- Marque ---------- */
@@ -132,6 +139,7 @@ main:focus { outline: none; }
 /* ---------- Boutons ---------- */
 .btn { appearance: none; border: 0; display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 54px; padding: 0 22px; border-radius: var(--r-md); font: 600 17px/1.15 var(--f-texte); text-align: center; width: 100%; transition: transform .2s var(--ressort), background-color .2s, box-shadow .2s, opacity .2s, color .2s; }
 .btn:active:not([disabled]) { transform: scale(.97); }
+.btn { text-wrap: balance; }
 .btn[disabled] { opacity: .42; cursor: not-allowed; box-shadow: none; }
 .btn .ic { width: 22px; height: 22px; }
 .btn-1 { background: var(--action); color: var(--sur-action); box-shadow: 0 1px 0 rgba(255, 255, 255, .14) inset, 0 12px 24px -14px var(--action); }
@@ -229,7 +237,7 @@ main:focus { outline: none; }
   .rail { display: block; min-width: 0; padding: 36px 24px 48px 4px; }
   .rail-int { display: grid; gap: 16px; }
 }
-.rail-dans-vue { display: grid; gap: 18px; }
+.rail-dans-vue, .rail-dans-vue .rail-int { display: grid; gap: inherit; }
 @media (min-width: 860px) { .seul-mobile { display: none !important; } }
 .rail-dans-vue .rail-seul { display: none; }
 
@@ -246,7 +254,9 @@ main:focus { outline: none; }
 /* ---------- Cartes et blocs ---------- */
 .carte { background: var(--carte); border-radius: var(--r-lg); padding: 20px; box-shadow: var(--ombre-1); }
 .tete-ecran { display: grid; gap: 10px; padding-top: 6px; }
-.tete-section { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-top: 6px; }
+.tete-section { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 12px; margin-top: 6px; }
+.tete-section > .lien, .tete-section > .exemple, .tete-section > .petit { white-space: nowrap; }
+.insec { white-space: nowrap; }
 .retour-lien { appearance: none; border: 0; background: none; justify-self: start; display: inline-flex; align-items: center; gap: 4px; min-height: 44px; padding: 0 10px 0 2px; margin-left: -4px; border-radius: 10px; color: var(--titre); font: 600 15px/1 var(--f-texte); }
 .retour-lien:hover { background: var(--griot-tint); }
 
@@ -315,7 +325,7 @@ main:focus { outline: none; }
 .pagne-mini { appearance: none; border: 0; text-align: left; width: 100%; display: grid; gap: 0; padding: 0; overflow: hidden; border-radius: var(--r-lg); background: var(--nuit); color: var(--sur-nuit); box-shadow: var(--ombre-2); }
 .pagne-mini canvas { width: 100%; height: 92px; }
 .pagne-mini .txt { padding: 14px 18px 16px; display: grid; gap: 4px; }
-.pagne-mini .txt p { font-size: 14.5px; color: var(--sur-nuit-2); }
+.pagne-mini .txt p { font-size: 14.5px; color: var(--sur-nuit-2); text-wrap: balance; }
 .pagne-mini .txt b { color: var(--sur-nuit); }
 .pagne-mini:focus-visible { outline: 2px solid var(--or); outline-offset: 3px; }
 
@@ -353,13 +363,14 @@ main:focus { outline: none; }
 /* ---------- Apprendre : le chemin ---------- */
 .unite { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 16px 18px; border-radius: var(--r-lg); }
 .unite.courante { background: var(--action); color: var(--sur-action); box-shadow: var(--ombre-2); }
-.unite.courante .sur-titre { color: color-mix(in srgb, var(--sur-action) 70%, transparent); }
+.unite.courante .sur-titre { color: color-mix(in srgb, var(--sur-action) 85%, transparent); }
 .unite.courante h2 { color: var(--sur-action); }
 .unite.faite { background: var(--or-tint); }
 .unite.verrou { background: var(--papier-2); color: var(--muet); }
 .unite.verrou h2 { color: var(--encre-2); }
 .unite h2 { font: 700 25px/1.05 var(--f-titre); margin-top: 3px; word-spacing: 0; }
 .unite p.d { font-size: 14px; margin-top: 2px; opacity: .85; }
+.unite.verrou p.d { opacity: 1; }
 .chemin { position: relative; display: grid; gap: 26px; padding: 18px 0 8px; }
 .chemin svg.trace { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
 .chemin .trace .t-fond { fill: none; stroke: var(--filet-2); stroke-width: 4; stroke-linecap: round; stroke-dasharray: 1 11; }
@@ -378,7 +389,7 @@ main:focus { outline: none; }
 .bulle-depart::after { content: ""; position: absolute; left: 50%; top: 100%; width: 12px; height: 12px; background: var(--carte); transform: translate(-50%, -6px) rotate(45deg); border-radius: 2px; }
 @keyframes flotte { 50% { transform: translate(-50%, -4px); } }
 .noeud.encours { margin-top: 40px; }
-.noeud .lib { position: relative; font: 600 13.5px/1.2 var(--f-texte); color: var(--muet); text-align: center; max-width: 170px; padding: 3px 8px; border-radius: 8px; background: var(--papier); }
+.noeud .lib { text-wrap: balance; position: relative; font: 600 13.5px/1.2 var(--f-texte); color: var(--muet); text-align: center; max-width: 170px; padding: 3px 8px; border-radius: 8px; background: var(--papier); }
 .noeud.encours .lib { color: var(--titre); }
 
 .lettres { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
@@ -400,6 +411,7 @@ main:focus { outline: none; }
 .seance-info { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; }
 .invite { background: var(--carte); border-radius: var(--r-lg); padding: 22px 20px 20px; box-shadow: var(--ombre-2); display: grid; gap: 12px; }
 .invite .consigne { font-size: 15px; color: var(--encre-2); }
+.phrase-fr, .question { word-spacing: -.12em; }
 .phrase-fr { font: 600 clamp(22px, 5.6vw, 28px)/1.3 var(--f-texte); color: var(--encre); text-wrap: balance; letter-spacing: -.005em; }
 .phrase-mo { font: 600 clamp(26px, 7vw, 34px)/1.25 var(--f-moore); word-spacing: -.15em; color: var(--titre); text-wrap: balance; }
 .invite .sens { font: 400 17px/1.4 var(--f-texte); color: var(--encre-2); }
@@ -454,6 +466,7 @@ main:focus { outline: none; }
 @keyframes sceau { from { transform: rotate(-45deg) scale(.4); opacity: 0; } }
 .fete h1 { font: 700 clamp(36px, 9vw, 52px)/1.02 var(--f-titre); word-spacing: 0; color: var(--titre); text-wrap: balance; }
 .fete .chapo { margin-inline: auto; }
+.resume b, .compteur, .chiffres-or b, .stat b, .solde .montant, .anneau b, .indic .chrono, .avatar, .gain-vol { word-spacing: 0; }
 .compteur { font: 700 clamp(44px, 11vw, 58px)/1 var(--f-titre); color: var(--titre); font-variant-numeric: tabular-nums; letter-spacing: 0; }
 
 /* ---------- Exercices ---------- */
@@ -480,7 +493,8 @@ main:focus { outline: none; }
 .decouverte { display: grid; justify-items: center; text-align: center; gap: 14px; padding: 28px 20px; }
 .decouverte .mo { font: 700 clamp(40px, 11vw, 58px)/1.05 var(--f-moore); word-spacing: -.12em; color: var(--titre); }
 .decouverte .fr { font: 500 21px/1.3 var(--f-texte); color: var(--encre); }
-.decouverte .aide { font-size: 15px; color: var(--muet); max-width: 40ch; }
+.decouverte .aide { font-size: 15px; color: var(--muet); max-width: 40ch; text-wrap: balance; }
+.fete .chapo, .note-centree { text-align: center; text-wrap: balance; }
 .lecteur-rond { appearance: none; border: 0; width: 96px; height: 96px; border-radius: 50%; display: grid; place-items: center; background: var(--or); color: var(--sur-or); box-shadow: 0 0 0 8px var(--or-tint), 0 18px 32px -16px var(--or); transition: transform .25s var(--ressort); position: relative; }
 .lecteur-rond .ic { width: 34px; height: 34px; }
 .lecteur-rond:active { transform: scale(.94); }
@@ -516,6 +530,7 @@ main:focus { outline: none; }
 .zone-texte { display: grid; gap: 8px; }
 .zone-texte label { font-weight: 600; font-size: 15px; }
 .zone-texte textarea { width: 100%; min-height: 120px; resize: vertical; padding: 14px 16px; border: 0; border-radius: var(--r-md); background: var(--carte); box-shadow: inset 0 0 0 1.5px var(--filet-2); font: 600 20px/1.4 var(--f-moore); color: var(--titre); }
+.zone-texte textarea::placeholder { font: 400 17px/1.4 var(--f-texte); color: var(--muet); opacity: 1; }
 .zone-texte textarea:focus { outline: none; box-shadow: inset 0 0 0 2px var(--griot); }
 .clavier-mo { display: flex; flex-wrap: wrap; gap: 6px; }
 .clavier-mo button { appearance: none; border: 0; min-width: 44px; height: 44px; padding: 0 10px; border-radius: 10px; background: var(--carte); box-shadow: inset 0 0 0 1px var(--filet-2), 0 2px 0 var(--filet-2); font: 700 20px/1 var(--f-moore); color: var(--titre); }
@@ -534,6 +549,7 @@ main:focus { outline: none; }
 .onb-art::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, color-mix(in srgb, var(--nuit) 92%, transparent) 0%, color-mix(in srgb, var(--nuit) 35%, transparent) 26%, transparent 42%, transparent 55%, var(--nuit) 100%); pointer-events: none; }
 .onb-art-haut { position: absolute; z-index: 2; top: calc(env(safe-area-inset-top, 0px) + 18px); left: 20px; display: flex; align-items: center; gap: 10px; }
 .onb-proverbe { position: absolute; z-index: 2; left: 20px; right: 20px; bottom: 40px; margin: 0; display: grid; gap: 6px; max-width: 440px; }
+.onb-proverbe p { text-wrap: balance; }
 .onb-proverbe p:first-child { font: 500 19px/1.35 var(--f-texte); color: var(--sur-nuit); }
 .onb-proverbe p:nth-child(2) { font-size: 14px; color: var(--sur-nuit-2); }
 .onb-proverbe cite { font: normal 700 13px/1.3 var(--f-titre); color: var(--or-nuit); letter-spacing: .08em; text-transform: uppercase; word-spacing: 0; }
@@ -544,7 +560,7 @@ main:focus { outline: none; }
 .onb-trois li { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 14px; align-items: start; }
 .onb-trois .pastille { width: 44px; height: 44px; border-radius: 14px; display: grid; place-items: center; background: var(--griot-tint); color: var(--titre); }
 .onb-trois b { display: block; font-size: 16px; }
-.onb-trois span { display: block; font-size: 14.5px; color: var(--muet); line-height: 1.45; margin-top: 2px; }
+.onb-trois span { text-wrap: pretty; display: block; font-size: 14.5px; color: var(--muet); line-height: 1.45; margin-top: 2px; }
 .onb-actions { display: grid; gap: 10px; margin-top: 4px; }
 .onb-note { font-size: 13.5px; color: var(--muet); }
 @media (min-width: 900px) {
@@ -564,7 +580,7 @@ main:focus { outline: none; }
 .choix-carte:active { transform: scale(.985); }
 .choix-carte .cc-ic { width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center; background: var(--papier-2); color: var(--titre); }
 .choix-carte b { display: block; font-size: 16.5px; color: var(--encre); }
-.choix-carte .cc-txt span { font-size: 14px; color: var(--muet); line-height: 1.4; }
+.choix-carte .cc-txt span { display: block; margin-top: 3px; font-size: 14px; line-height: 1.4; color: var(--muet); text-wrap: pretty; }
 .choix-carte .cc-coche { width: 26px; height: 26px; border-radius: 50%; box-shadow: inset 0 0 0 2px var(--filet-2); display: grid; place-items: center; color: transparent; transition: background-color .2s; }
 .choix-carte .cc-coche .ic { width: 16px; height: 16px; stroke-width: 3; }
 .choix-carte[aria-checked="true"] { background: var(--griot-tint); box-shadow: inset 0 0 0 2px var(--griot); }
@@ -581,7 +597,7 @@ main:focus { outline: none; }
 .choix { display: flex; flex-wrap: wrap; gap: 8px; }
 .saisie { display: flex; align-items: center; border-radius: var(--r-md); box-shadow: inset 0 0 0 1.5px var(--filet-2); background: var(--carte); min-height: 58px; overflow: hidden; }
 .saisie:focus-within { box-shadow: inset 0 0 0 2px var(--griot); }
-.saisie .pref { align-self: stretch; display: flex; align-items: center; padding: 0 14px 0 16px; border-right: 1px solid var(--filet); font: 700 16px/1 var(--f-texte); color: var(--muet); }
+.saisie .pref { align-self: stretch; display: flex; align-items: center; padding: 0 14px 0 16px; border-right: 1px solid var(--filet); font: 600 19px/1 var(--f-texte); color: var(--muet); }
 .saisie input { flex: 1; min-width: 0; height: 58px; border: 0; outline: 0; background: transparent; padding: 0 16px; font: 600 19px/1 var(--f-texte); letter-spacing: .04em; color: var(--encre); font-variant-numeric: tabular-nums; }
 .saisie input.texte { letter-spacing: 0; font-size: 18px; }
 .erreur { color: var(--terre); font-size: 13.5px; font-weight: 600; min-height: 1.3em; }
@@ -600,7 +616,7 @@ main:focus { outline: none; }
 
 .points-accord { display: grid; gap: 10px; }
 .point { background: var(--carte); border-radius: var(--r-lg); padding: 16px; box-shadow: var(--ombre-1); display: grid; gap: 8px; }
-.point h3 { display: flex; gap: 12px; align-items: baseline; font: 600 16px/1.3 var(--f-texte); }
+.point h3 { text-wrap: balance; display: flex; gap: 12px; align-items: baseline; font: 600 16px/1.3 var(--f-texte); }
 .point h3 .num { flex: none; width: 24px; height: 24px; border-radius: 7px; display: grid; place-items: center; font: 700 12.5px/1 var(--f-texte); background: var(--griot-tint); color: var(--titre); }
 .point p { font-size: 14.5px; color: var(--encre-2); }
 .point .ecoute { justify-self: start; }
@@ -608,7 +624,7 @@ main:focus { outline: none; }
 /* ---------- Héritage ---------- */
 .heritage-hero { position: relative; overflow: hidden; border-radius: var(--r-lg); background: var(--nuit); color: var(--sur-nuit); display: grid; grid-template-columns: minmax(0, 1fr); box-shadow: var(--ombre-2); }
 .heritage-hero .txt { position: relative; z-index: 1; padding: 26px 22px 24px; display: grid; gap: 14px; align-content: end; }
-.heritage-hero h1 { font: 700 clamp(40px, 10vw, 62px)/.98 var(--f-titre); letter-spacing: .005em; word-spacing: 0; text-transform: uppercase; text-wrap: balance; }
+.heritage-hero h1 { font: 700 clamp(40px, 9.6vw, 56px)/.98 var(--f-titre); letter-spacing: .005em; word-spacing: 0; text-transform: uppercase; text-wrap: balance; }
 .heritage-hero h1 em { color: var(--or-nuit); font-style: normal; }
 .heritage-hero .chapo { color: var(--sur-nuit-2); }
 .heritage-hero .toile { position: relative; min-height: 230px; }
@@ -616,7 +632,7 @@ main:focus { outline: none; }
 .chiffres-or { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; padding-top: 6px; border-top: 1px solid rgba(255, 255, 255, .12); }
 .chiffres-or b { display: block; font: 700 clamp(26px, 6.4vw, 34px)/1.05 var(--f-titre); color: var(--or-nuit); font-variant-numeric: tabular-nums; white-space: nowrap; padding-top: 10px; }
 .chiffres-or span { font-size: 12.5px; color: var(--sur-nuit-2); line-height: 1.3; }
-@media (min-width: 720px) { .heritage-hero { grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); } .heritage-hero .toile { min-height: 100%; } .heritage-hero .txt { padding: 34px 30px 30px; } }
+@media (min-width: 720px) { .heritage-hero { grid-template-columns: minmax(0, 1.4fr) minmax(0, .6fr); } .heritage-hero .toile { min-height: 100%; } .heritage-hero .txt { padding: 34px 30px 30px; } }
 .legende-pagne { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 13px; color: var(--sur-nuit-2); }
 .legende-pagne i { display: inline-block; width: 18px; height: 6px; border-radius: 2px; vertical-align: middle; margin-right: 6px; }
 
@@ -643,12 +659,12 @@ main:focus { outline: none; }
 .registre .meta { margin-top: 2px; }
 
 .capsule { position: relative; overflow: hidden; border-radius: var(--r-lg); padding: 22px 20px; background: linear-gradient(160deg, var(--griot-tint) 0%, var(--or-tint) 100%); display: grid; gap: 12px; }
-.capsule h2 { font: 700 30px/1.04 var(--f-titre); color: var(--titre); word-spacing: 0; }
+.capsule h2 { font: 700 30px/1.04 var(--f-titre); color: var(--titre); word-spacing: 0; text-wrap: balance; }
 .capsule p { color: var(--encre-2); font-size: 15px; }
 .idees { display: flex; flex-wrap: wrap; gap: 8px; }
 
 /* ---------- Profil ---------- */
-.profil-tete { padding-top: 10px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 16px; align-items: center; }
+.profil-tete { padding: 10px 0 0 7px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 16px; align-items: center; }
 .avatar { width: 76px; height: 76px; border-radius: 50%; display: grid; place-items: center; font: 700 36px/1 var(--f-titre); color: var(--sur-action); background: var(--action); box-shadow: 0 0 0 4px var(--papier), 0 0 0 7px var(--or); }
 .niveau-carte { display: grid; gap: 10px; }
 .niveau-carte .haut { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
@@ -660,7 +676,7 @@ main:focus { outline: none; }
 .stat span { font-size: 12.5px; color: var(--muet); line-height: 1.25; }
 .motifs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px 10px; }
 @media (min-width: 640px) { .motifs { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
-.motif { display: grid; justify-items: center; gap: 8px; text-align: center; }
+.motif { display: grid; justify-items: center; align-content: start; gap: 8px; text-align: center; }
 .motif .em { width: 62px; height: 62px; display: grid; place-items: center; position: relative; }
 .motif .em::before { content: ""; position: absolute; inset: 9px; border-radius: 12px; transform: rotate(45deg); background: var(--papier-2); box-shadow: inset 0 0 0 1.5px var(--filet-2); }
 .motif.gagne .em::before { background: linear-gradient(135deg, var(--or-vif), var(--or)); box-shadow: 0 0 0 4px var(--or-tint); }
@@ -680,12 +696,12 @@ main:focus { outline: none; }
 .segment button .ic { width: 17px; height: 17px; }
 .segment button[aria-checked="true"] { background: var(--carte); color: var(--titre); box-shadow: var(--ombre-1); }
 
-.onglets-texte { display: flex; gap: 6px; overflow-x: auto; padding: 2px 2px 4px; scrollbar-width: none; }
+.onglets-texte { display: flex; flex-wrap: wrap; gap: 6px; padding: 2px 2px 4px; }
 .onglets-texte button { appearance: none; border: 0; flex: none; white-space: nowrap; min-height: 40px; padding: 0 14px; border-radius: 999px; background: var(--papier-2); font: 600 14px/1 var(--f-texte); color: var(--encre-2); }
 .onglets-texte button[aria-pressed="true"] { background: var(--action); color: var(--sur-action); }
 .texte-legal { display: grid; gap: 10px; font-size: 15px; color: var(--encre-2); max-width: 64ch; }
 .texte-legal h4 { margin: 10px 0 0; font: 600 16px/1.3 var(--f-texte); color: var(--encre); }
-.a-completer { background: var(--or-tint); color: var(--or-texte); padding: 1px 6px; border-radius: 5px; font-weight: 600; }
+.a-completer { background: var(--or-tint); color: var(--or-texte); padding: 1px 6px; border-radius: 5px; font-weight: 600; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 
 /* ---------- Calques : feuille, toast, confettis ---------- */
 .voile { position: fixed; inset: 0; z-index: 60; background: var(--voile); animation: fondu .25s ease both; }
@@ -725,22 +741,22 @@ main:focus { outline: none; }
   // Phrases FR : lot 1 de dataset-sankofa (scripts/phrases_a_importer.csv).
   // Mooré : exemples courants (salutations, mots de base) ; orthographe à valider par un locuteur et un linguiste.
   const PARLER = [
-    { fr: "Où se trouve le marché le plus proche ?", cat: "Commerce" },
-    { fr: "Combien coûte ce sac de riz ?", cat: "Commerce", note: "« sac » désigne ici une unité de mesure locale." },
-    { fr: "Ce prix est trop élevé, pouvez-vous baisser un peu ?", cat: "Commerce" },
-    { fr: "Est-ce que vous acceptez le paiement mobile ?", cat: "Commerce" },
+    { fr: "Où se trouve le marché le plus proche ?", cat: "Commerce" },
+    { fr: "Combien coûte ce sac de riz ?", cat: "Commerce", note: "« sac » désigne ici une unité de mesure locale." },
+    { fr: "Ce prix est trop élevé, pouvez-vous baisser un peu ?", cat: "Commerce" },
+    { fr: "Est-ce que vous acceptez le paiement mobile ?", cat: "Commerce" },
     { fr: "Le prix du mil a beaucoup augmenté cette année.", cat: "Commerce" }
   ];
   const LIRE = [
     { mo: "Ne y yibeoogo.", fr: "Bonjour (le matin).", cat: "Salutations" },
-    { mo: "Ne y wĩndga, yaa wãna ?", fr: "Bonjour, comment ça va ?", cat: "Salutations" },
+    { mo: "Ne y wĩndga, yaa wãna ?", fr: "Bonjour, comment ça va ?", cat: "Salutations" },
     { mo: "Laafi bala.", fr: "Ça va bien.", cat: "Salutations" },
-    { mo: "Koom yaa vɩɩm yẽg.", fr: "L'eau, c'est la vie.", cat: "Vie quotidienne" },
+    { mo: "Koom yaa vɩɩm yẽg.", fr: "L’eau, c’est la vie.", cat: "Vie quotidienne" },
     { mo: "Ne y zaabre.", fr: "Bonsoir.", cat: "Salutations" }
   ];
   const ECOUTE = [
-    { mo: "Koom yaa vɩɩm yẽg.", fr: "L'eau, c'est la vie.", d: 2.4 },
-    { mo: "Ne y wĩndga, yaa wãna ?", fr: "Bonjour, comment ça va ?", d: 2.6 },
+    { mo: "Koom yaa vɩɩm yẽg.", fr: "L’eau, c’est la vie.", d: 2.4 },
+    { mo: "Ne y wĩndga, yaa wãna ?", fr: "Bonjour, comment ça va ?", d: 2.6 },
     { mo: "Laafi bala.", fr: "Ça va bien.", d: 1.5 },
     { mo: "Ne y zaabre.", fr: "Bonsoir.", d: 1.4 },
     { mo: "Ne y yibeoogo.", fr: "Bonjour (le matin).", d: 1.6 }
@@ -750,33 +766,33 @@ main:focus { outline: none; }
     { fr: "Il faut se laver les mains avant de manger.", cat: "Santé" },
     { fr: "La moustiquaire protège contre le paludisme.", cat: "Santé" },
     { fr: "Les paysans préparent les champs avant la saison des pluies.", cat: "Agriculture" },
-    { fr: "Avez-vous de la monnaie sur ce billet ?", cat: "Commerce" }
+    { fr: "Avez-vous de la monnaie sur ce billet ?", cat: "Commerce" }
   ];
   const LECON = [
     { type: "decouvre", mo: "Ne y zaabre", fr: "Bonsoir", aide: "On salue ainsi en fin de journée, quand le soleil descend." },
-    { type: "qcm", q: "Le matin, comment salue-t-on ?", opts: ["Ne y yibeoogo", "Ne y zaabre", "Barka"], ok: 0, sens: "Ne y yibeoogo : bonjour, le matin." },
-    { type: "ecoute", q: "Écoutez, puis choisissez ce que vous entendez.", opts: ["Ne y wĩndga", "Laafi bala", "Koom"], ok: 1, sens: "Laafi bala : ça va bien." },
-    { type: "paires", q: "Reliez chaque mot à son sens.", paires: [["Barka", "Merci"], ["Laafi", "La santé, la paix"], ["Koom", "L'eau"], ["Ne y wĩndga", "Bonjour, l'après-midi"]] },
-    { type: "repete", mo: "Ne y wĩndga", fr: "Bonjour, l'après-midi" }
+    { type: "qcm", q: "Le matin, comment salue-t-on ?", opts: ["Ne y yibeoogo", "Ne y zaabre", "Barka"], ok: 0, sens: "Ne y yibeoogo : bonjour, le matin." },
+    { type: "ecoute", q: "Écoutez, puis choisissez ce que vous entendez.", opts: ["Ne y wĩndga", "Laafi bala", "Koom"], ok: 1, sens: "Laafi bala : ça va bien." },
+    { type: "paires", q: "Reliez chaque mot à son sens.", paires: [["Barka", "Merci"], ["Laafi", "La santé, la paix"], ["Koom", "L’eau"], ["Ne y wĩndga", "Bonjour, l’après-midi"]] },
+    { type: "repete", mo: "Ne y wĩndga", fr: "Bonjour, l’après-midi" }
   ];
   const UNITES = [
-    { t: "Premiers mots", d: "Merci, l'eau, la santé", etat: "faite" },
-    { t: "Se saluer", d: "Le matin, l'après-midi, le soir", etat: "courante" },
+    { t: "Premiers mots", d: "Merci, l’eau, la santé", etat: "faite" },
+    { t: "Se saluer", d: "Le matin, l’après-midi, le soir", etat: "courante" },
     { t: "Compter", d: "Les nombres du marché", etat: "verrou" },
     { t: "Au marché", d: "Demander un prix, acheter, vendre", etat: "verrou" },
     { t: "La santé", d: "Le corps, le centre de santé", etat: "verrou" },
     { t: "Champs et saisons", d: "La pluie, les semences, la récolte", etat: "verrou" }
   ];
-  const LECONS_U2 = ["Bonjour le matin", "Bonjour l'après-midi", "Bonsoir et bonne nuit", "Prendre des nouvelles", "Défi : saluer à voix haute"];
+  const LECONS_U2 = ["Bonjour le matin", "Bonjour l’après-midi", "Bonsoir et bonne nuit", "Prendre des nouvelles", "Défi : saluer à voix haute"];
   const LETTRES = [
-    { l: "ɛ", son: "Un « è » ouvert, comme dans « mère ».", ex: null },
-    { l: "ɩ", son: "Un « i » plus ouvert, entre « i » et « é ».", ex: ["vɩɩm", "la vie"] },
-    { l: "ʋ", son: "Un « ou » plus ouvert, entre « ou » et « o ».", ex: ["yʋʋre", "le nom"] },
-    { l: "ã", son: "Voyelle nasale : l'air passe aussi par le nez, proche de « an ».", ex: ["tãabo", "trois"] },
-    { l: "ẽ", son: "Voyelle nasale, proche de « in ».", ex: ["yẽg", "(dans « vɩɩm yẽg »)"] },
-    { l: "ĩ", son: "Un « i » nasal.", ex: ["wĩndga", "le jour, l'après-midi"] },
-    { l: "õ", son: "Voyelle nasale, proche de « on ».", ex: ["sõama", "bien, bon"] },
-    { l: "ũ", son: "Un « ou » nasal.", ex: null }
+    { l: "ɛ", son: "Un « è » ouvert, comme dans « mère ».", ex: null },
+    { l: "ɩ", son: "Un « i » plus ouvert, entre « i » et « é ».", ex: ["vɩɩm", "la vie"] },
+    { l: "ʋ", son: "Un « ou » plus ouvert, entre « ou » et « o ».", ex: ["yʋʋre", "le nom"] },
+    { l: "ã", son: "Voyelle nasale : l’air passe aussi par le nez, proche de « an ».", ex: ["tãabo", "trois"] },
+    { l: "ẽ", son: "Voyelle nasale, proche de « in ».", ex: ["yẽg", "(dans « vɩɩm yẽg »)"] },
+    { l: "ĩ", son: "Un « i » nasal.", ex: ["wĩndga", "le jour, l’après-midi"] },
+    { l: "õ", son: "Voyelle nasale, proche de « on ».", ex: ["sõama", "bien, bon"] },
+    { l: "ũ", son: "Un « ou » nasal.", ex: null }
   ];
   const LIEUX = ["Ouagadougou", "Ouahigouya", "Kaya", "Koudougou", "Ziniaré", "Manga", "Ailleurs"];
   const VILLES = [["Ouagadougou", 1840], ["Kaya", 612], ["Ouahigouya", 455], ["Koudougou", 260], ["Ziniaré", 148], ["Manga", 102]];
@@ -784,10 +800,10 @@ main:focus { outline: none; }
   const MOTIFS = [
     { t: "Première voix", d: "Un premier lot envoyé", ic: "micro", ok: true },
     { t: "Premiers mots", d: "Unité 1 terminée", ic: "livre", ok: true },
-    { t: "Sept feux", d: "6 jours sur 7", ic: "flamme", ok: false },
-    { t: "Oreille d'or", d: "40 écoutes sur 50", ic: "casque", ok: false },
+    { t: "Sept feux", d: "6 jours sur 7", ic: "flamme", ok: false },
+    { t: "Oreille d’or", d: "40 écoutes sur 50", ic: "casque", ok: false },
     { t: "Passeur", d: "Inviter une personne aînée", ic: "mains", ok: false },
-    { t: "Message pour 2076", d: "Laisser une voix à l'avenir", ic: "sablier", ok: false }
+    { t: "Message pour 2076", d: "Laisser une voix à l’avenir", ic: "sablier", ok: false }
   ];
   const CONSIGNES = [
     ["Un endroit calme", "Un peu de bruit passe. Une radio, une télévision ou une autre personne qui parle, non."],
@@ -798,29 +814,29 @@ main:focus { outline: none; }
   const TEXTES = {
     conditions: { t: "Conditions de contribution", c: "Conditions", v: "v1.0 · projet du 08/10/2026", h: `
       <h4>1. Qui peut contribuer</h4><p>Toute personne majeure qui parle le mooré et possède un numéro mobile money au Burkina Faso. Un seul compte par personne.</p>
-      <h4>2. Vos contributions</h4><p>Vos enregistrements et vos traductions doivent être de vous. Vous ne lisez pas le texte d'une autre personne à sa place et vous n'enregistrez pas la voix de quelqu'un d'autre.</p>
-      <h4>3. Ce que vous cédez</h4><p>En contrepartie de la rémunération prévue, vous cédez à SAN-KOFA SARL le droit d'utiliser, reproduire et exploiter vos enregistrements et traductions pour entraîner, évaluer et commercialiser des modèles de traitement de la langue, pour le monde entier et pour la durée des droits. <span class="a-completer">Étendue exacte à valider par un juriste</span></p>
-      <h4>4. Rémunération</h4><p>Chaque minute validée et chaque écoute validée sont payées au tarif affiché dans l'application au moment de la contribution. Les versements partent sur votre numéro mobile money.</p>
+      <h4>2. Vos contributions</h4><p>Vos enregistrements et vos traductions doivent être de vous. Vous ne lisez pas le texte d’une autre personne à sa place et vous n’enregistrez pas la voix de quelqu’un d’autre.</p>
+      <h4>3. Ce que vous cédez</h4><p>En contrepartie de la rémunération prévue, vous cédez à SAN-KOFA SARL le droit d’utiliser, reproduire et exploiter vos enregistrements et traductions pour entraîner, évaluer et commercialiser des modèles de traitement de la langue, pour le monde entier et pour la durée des droits. <span class="a-completer">Étendue exacte à valider par un juriste</span></p>
+      <h4>4. Rémunération</h4><p>Chaque minute validée et chaque écoute validée sont payées au tarif affiché dans l’application au moment de la contribution. Les versements partent sur votre numéro mobile money.</p>
       <h4>5. Arrêter et retirer</h4><p>Vous pouvez arrêter à tout moment. Sur demande, vos enregistrements sont retirés des prochaines versions du corpus. Une version déjà figée et publiée ne peut plus être modifiée.</p>
-      <h4>6. Usage acceptable</h4><p>Pas d'enregistrement faux, insultant ou fait pour tromper le contrôle. Un compte qui triche peut être fermé et ses gains non validés annulés.</p>
+      <h4>6. Usage acceptable</h4><p>Pas d’enregistrement faux, insultant ou fait pour tromper le contrôle. Un compte qui triche peut être fermé et ses gains non validés annulés.</p>
       <h4>7. Mises à jour</h4><p>Si ces conditions changent, nous vous demandons de les accepter à nouveau avant votre prochain enregistrement.</p>
       <h4>8. Droit applicable</h4><p>Droit burkinabè. Tribunaux de Ouagadougou.</p>` },
     confidentialite: { t: "Politique de confidentialité", c: "Confidentialité", v: "v1.0 · projet du 08/10/2026", h: `
-      <h4>Données que nous traitons</h4><p><b>Compte</b> : numéro de téléphone, opérateur, code PIN (chiffré, illisible pour l'équipe). <b>Profil</b> : prénom ou surnom, genre, tranche d'âge, lieu d'apprentissage du mooré, chacun facultatif. <b>Contributions</b> : enregistrements, traductions, avis d'écoute. <b>Accord</b> : date, heure et version des textes acceptés.</p>
-      <h4>Pourquoi</h4><p>Constituer un corpus de voix mooré, entraîner et évaluer des modèles, et vous payer. Rien d'autre : pas de publicité, pas de revente de votre numéro.</p>
-      <h4>Séparation</h4><p>Votre numéro et votre voix sont stockés séparément. Le corpus ne contient qu'un identifiant chiffré, jamais votre numéro ni votre nom.</p>
-      <h4>Message pour l'avenir</h4><p>Le message que vous laissez dans l'archive de la génération est gardé à part : il n'entre pas dans le corpus d'entraînement et vous pouvez le retirer à tout moment.</p>
-      <h4>Durée</h4><p>Compte : tant qu'il est actif, puis 3 ans pour les obligations de paiement. Enregistrements : tant que le corpus est exploité, sauf retrait.</p>
-      <h4>Hébergement</h4><p><span class="a-completer">Lieu d'hébergement et éventuels transferts hors du Burkina Faso à compléter</span></p>
-      <h4>Vos droits</h4><p>Accès, rectification, retrait, opposition, conformément à la loi n° 001-2021/AN portant protection des personnes à l'égard du traitement des données à caractère personnel. Contact : <span class="a-completer">adresse à compléter</span>. Vous pouvez aussi saisir la Commission de l'informatique et des libertés (CIL).</p>` },
+      <h4>Données que nous traitons</h4><p><b>Compte</b> : numéro de téléphone, opérateur, code PIN (chiffré, illisible pour l’équipe). <b>Profil</b> : prénom ou surnom, genre, tranche d’âge, lieu d’apprentissage du mooré, chacun facultatif. <b>Contributions</b> : enregistrements, traductions, avis d’écoute. <b>Accord</b> : date, heure et version des textes acceptés.</p>
+      <h4>Pourquoi</h4><p>Constituer un corpus de voix mooré, entraîner et évaluer des modèles, et vous payer. Rien d’autre : pas de publicité, pas de revente de votre numéro.</p>
+      <h4>Séparation</h4><p>Votre numéro et votre voix sont stockés séparément. Le corpus ne contient qu’un identifiant chiffré, jamais votre numéro ni votre nom.</p>
+      <h4>Message pour l’avenir</h4><p>Le message que vous laissez dans l’archive de la génération est gardé à part : il n’entre pas dans le corpus d’entraînement et vous pouvez le retirer à tout moment.</p>
+      <h4>Durée</h4><p>Compte : tant qu’il est actif, puis 3 ans pour les obligations de paiement. Enregistrements : tant que le corpus est exploité, sauf retrait.</p>
+      <h4>Hébergement</h4><p><span class="a-completer">Lieu d’hébergement et éventuels transferts hors du Burkina Faso à compléter</span></p>
+      <h4>Vos droits</h4><p>Accès, rectification, retrait, opposition, conformément à la loi n° 001-2021/AN portant protection des personnes à l’égard du traitement des données à caractère personnel. Contact : <span class="a-completer">adresse à compléter</span>. Vous pouvez aussi saisir la Commission de l’informatique et des libertés (CIL).</p>` },
     mentions: { t: "Mentions légales", c: "Mentions légales", v: "v1.0 · projet du 08/10/2026", h: `
-      <h4>Éditeur</h4><p>SAN-KOFA SARL, Ouagadougou, Burkina Faso. RCCM : <span class="a-completer">à compléter</span>. IFU : <span class="a-completer">à compléter</span>.</p>
+      <h4>Éditeur</h4><p>SAN-KOFA SARL, Ouagadougou, Burkina Faso. RCCM : <span class="a-completer">à compléter</span>. IFU : <span class="a-completer">à compléter</span>.</p>
       <h4>Responsable de la publication</h4><p><span class="a-completer">À compléter</span></p>
       <h4>Hébergement</h4><p><span class="a-completer">Hébergeur, adresse et pays à compléter</span></p>
-      <h4>Propriété intellectuelle</h4><p>La marque SANKOFA, LANGUAGE AI et les éléments de l'application appartiennent à SAN-KOFA SARL.</p>` },
+      <h4>Propriété intellectuelle</h4><p>La marque SANKOFA, LANGUAGE AI et les éléments de l’application appartiennent à SAN-KOFA SARL.</p>` },
     cookies: { t: "Cookies et stockage", c: "Cookies", v: "v1.0 · projet du 08/10/2026", h: `
-      <h4>Ce que l'application garde sur votre téléphone</h4><p><b>Session</b> : un cookie technique qui vous garde connecté. <b>Lots hors ligne</b> : vos enregistrements en attente d'envoi, effacés dès qu'ils sont reçus. <b>Progression</b> : vos cauris, votre feu et vos leçons, pour reprendre où vous en étiez.</p>
-      <h4>Ce que nous n'utilisons pas</h4><p>Aucun cookie publicitaire, aucune mesure d'audience, aucun outil tiers de suivi. C'est pourquoi l'application vous informe sans vous demander de choisir.</p>` }
+      <h4>Ce que l’application garde sur votre téléphone</h4><p><b>Session</b> : un cookie technique qui vous garde connecté. <b>Lots hors ligne</b> : vos enregistrements en attente d’envoi, effacés dès qu’ils sont reçus. <b>Progression</b> : vos cauris, votre feu et vos leçons, pour reprendre où vous en étiez.</p>
+      <h4>Ce que nous n’utilisons pas</h4><p>Aucun cookie publicitaire, aucune mesure d’audience, aucun outil tiers de suivi. C’est pourquoi l’application vous informe sans vous demander de choisir.</p>` }
   };
 
   // ---------- État ----------
@@ -854,8 +870,8 @@ main:focus { outline: none; }
   const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const nf = new Intl.NumberFormat("fr-FR");
-  const nb = (n) => nf.format(n);
-  const sec = (d) => d.toFixed(1).replace(".", ",") + " s";
+  const nb = (n) => nf.format(n).replace(/\u202F/g, "\u00A0"); // ni Elms ni Fira n’ont l’espace fine
+  const sec = (d) => d.toFixed(1).replace(".", ",") + "\u00A0s";
   const reduit = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const vibre = (ms = 12) => { try { navigator.vibrate && navigator.vibrate(ms); } catch (e) {} };
   const large = () => matchMedia("(min-width: 1240px)").matches;
@@ -935,7 +951,7 @@ main:focus { outline: none; }
   const cauris = () => `<svg class="cauris" viewBox="0 0 24 24" aria-hidden="true"><ellipse class="c1" cx="12" cy="12" rx="6.6" ry="9"/><path class="c2" d="M12 5.4c-1.2 2.3-1.2 10.9 0 13.2M9.9 8.3h1.2M9.5 10.8h1.5M9.5 13.3h1.5M9.9 15.8h1.2M14.1 8.3h-1.2M14.5 10.8H13M14.5 13.3H13M14.1 15.8h-1.2"/></svg>`;
   const logo = (cls = "") => `<svg class="embleme ${cls}" viewBox="0 0 64 64" aria-hidden="true"><path class="e-bulle" d="M32 10A20 20 0 0 0 17.9 44.1L13.2 53.4l9.6-5A20 20 0 0 0 32 50Z"/><circle class="e-point" cx="20.5" cy="30" r="2.7"/><circle class="e-point" cx="27.5" cy="30" r="2.7"/><path class="e-cerveau" d="M33.5 10.5c3.2-2.4 8.2-1.6 9.8 2 4.6-.8 8.4 2.8 7.6 7.3 3.9 1.6 5 6.4 2.4 9.6 2.9 2.8 2 7.9-1.8 9.2.4 4.6-4.1 8.2-8.6 6.9-1.8 3.4-6.4 4.4-9.4 2Z"/><path class="e-circuit" d="M33.5 24h5.5l2.4-2.8M33.5 31h11M33.5 38h4.5l2.4 2.8"/><circle class="e-noeud" cx="42.6" cy="19.8" r="2"/><circle class="e-noeud or" cx="46.6" cy="31" r="2"/><circle class="e-noeud" cx="41.6" cy="42.2" r="2"/></svg>`;
   const marque = (clair = false) => `${logo(clair ? "clair" : "")}<span class="mot-marque${clair ? " clair" : ""}">LANGUAGE<span class="pt">·</span><span class="ai">AI</span></span>`;
-  const puceFeu = () => `<span class="puce puce-feu" title="Votre feu : jours de suite">${flamme()}<span>${S.feu}</span><span class="sr"> jours de suite</span></span>`;
+  const puceFeu = () => `<span class="puce puce-feu" title="Votre feu : jours de suite">${flamme()}<span>${S.feu}</span><span class="sr"> jours de suite</span></span>`;
   const puceCauris = () => `<span class="puce puce-cauris" title="Vos cauris">${cauris()}<span class="val-cauris">${nb(S.cauris)}</span><span class="sr"> cauris</span></span>`;
   const trame = (n, fait, cour = -1, clair = false, neuf = -1) => `<div class="trame${clair ? " clair" : ""}" style="--n:${n}" role="img" aria-label="${fait} sur ${n}">${Array.from({ length: n }, (_, i) => `<i class="${i < fait ? "fait" : i === cour ? "encours" : ""}${i === neuf ? " neuf" : ""}"></i>`).join("")}</div>`;
   const btnEcoute = (id, lib = "Écouter", seul = false) => `<button class="ecoute${seul ? " seul" : ""}${S.lecture === id ? " joue" : ""}" data-a="ecoute" data-v="${id}" aria-label="${lib}"><span class="rond">${ic(S.lecture === id ? "pause" : "jouer")}</span>${seul ? "" : `<span>${S.lecture === id ? "Écoute…" : lib}</span>`}</button>`;
@@ -962,7 +978,7 @@ main:focus { outline: none; }
   function barreNiveau() {
     const k = niveauDe(S.cauris), bas = NIVEAUX[k][0], haut = NIVEAUX[k + 1] ? NIVEAUX[k + 1][0] : bas;
     const pct = haut > bas ? Math.round((S.cauris - bas) / (haut - bas) * 100) : 100;
-    return `<div class="barre or" role="img" aria-label="${pct} % vers le niveau suivant"><i style="width:${pct}%"></i></div><p class="petit muet" style="margin-top:6px">${NIVEAUX[k + 1] ? `${nb(haut - S.cauris)} cauris avant « ${NIVEAUX[k + 1][1]} »` : "Niveau le plus haut atteint"}</p>`;
+    return `<div class="barre or" role="img" aria-label="${pct} % vers le niveau suivant"><i style="width:${pct}%"></i></div><p class="petit muet" style="margin-top:6px">${NIVEAUX[k + 1] ? `${nb(haut - S.cauris)} cauris avant <span class="insec">« ${NIVEAUX[k + 1][1]} »</span>` : "Niveau le plus haut atteint"}</p>`;
   }
   const teteSeance = (fermer, n, fait, cour, neuf = -1) => `<header class="focus-tete"><div>
       <button class="ic-btn" data-a="aller" data-v="${fermer}" aria-label="Fermer la séance">${ic("fermer")}</button>
@@ -982,19 +998,19 @@ main:focus { outline: none; }
     <section class="onb-art" aria-label="Le pagne de la génération">
       <canvas class="cv-pagne" data-sens="v" data-progres=".58" data-anime="1" aria-hidden="true"></canvas>
       <div class="onb-art-haut">${marque(true)}</div>
-      <blockquote class="onb-proverbe"><p lang="ak">« Se wo were fi na wosankofa a yenkyi. »</p><p>Il n'est pas interdit de revenir chercher ce que l'on a oublié.</p><cite>Proverbe akan à l'origine du nom Sankofa</cite></blockquote>
+      <blockquote class="onb-proverbe"><p lang="ak">« Se wo were fi na wosankofa a yenkyi. »</p><p>Il n’est pas interdit de revenir chercher ce que l’on a oublié.</p><cite>Proverbe akan à l’origine du nom Sankofa</cite></blockquote>
     </section>
     <main class="onb-texte" id="vue" tabindex="-1">
       <p class="sur-titre">Archive vivante du mooré · 2026</p>
       <h1 class="onb-titre">Le mooré de demain se tisse avec <em>nos voix</em>.</h1>
-      <p class="chapo">Apprenez la langue cinq minutes par jour. Prêtez votre voix à l'archive que notre génération laissera à celles et ceux qui viennent. Chaque minute validée est payée.</p>
+      <p class="chapo">Apprenez la langue cinq minutes par jour. Prêtez votre voix à l’archive que notre génération laissera à celles et ceux qui viennent. Chaque minute validée est payée.</p>
       <ul class="onb-trois">
-        <li><span class="pastille">${ic("livre")}</span><div><b>Apprendre</b><span>Des leçons courtes, à l'oreille, avec les voix de l'archive.</span></div></li>
+        <li><span class="pastille">${ic("livre")}</span><div><b>Apprendre</b><span>Des leçons courtes, à l’oreille, avec les voix de l’archive.</span></div></li>
         <li><span class="pastille">${ic("micro")}</span><div><b>Transmettre</b><span>Dire et lire des phrases en mooré, écouter celles des autres.</span></div></li>
         <li><span class="pastille">${ic("portefeuille")}</span><div><b>Être payé</b><span>Sur Orange Money ou Moov Money, pour chaque minute validée.</span></div></li>
       </ul>
-      <div class="onb-actions"><button class="btn btn-1" data-a="aller" data-v="objectif">Commencer</button><button class="btn btn-2" data-a="connexion">J'ai déjà un compte</button></div>
-      <p class="onb-note">Aucun cookie publicitaire ni mesure d'audience. <button class="lien" data-a="legal" data-v="cookies">En savoir plus</button></p>
+      <div class="onb-actions"><button class="btn btn-1" data-a="aller" data-v="objectif">Commencer</button><button class="btn btn-2" data-a="connexion">J’ai déjà un compte</button></div>
+      <p class="onb-note">Aucun cookie publicitaire ni mesure d’audience. <button class="lien" data-a="legal" data-v="cookies">En savoir plus</button></p>
       <p class="onb-note"><button class="lien" data-a="demo">Voir tous les écrans de la maquette</button></p>
     </main>
   </div>` });
@@ -1002,40 +1018,40 @@ main:focus { outline: none; }
   const onb = (etape, retour, main, pied) => ({ focus: true, tete: teteOnb(etape, retour), main, pied });
 
   V.objectif = () => onb(1, "bienvenue", `
-    <div class="etape-titre"><h1 class="t-1">Qu'est-ce qui vous amène ?</h1><p class="chapo">L'accueil s'adapte à ce que vous voulez faire. Vous pourrez tout faire ensuite.</p></div>
+    <div class="etape-titre"><h1 class="t-1">Qu’est-ce qui vous amène ?</h1><p class="chapo">L’accueil s’adapte à ce que vous voulez faire. Vous pourrez tout faire ensuite.</p></div>
     <div class="choix-cartes" role="radiogroup" aria-label="Votre objectif">
       ${[["apprendre", "livre", "Apprendre le mooré", "Le comprendre et le parler, pas à pas."], ["transmettre", "micro", "Transmettre ma langue", "Je le parle et je veux le laisser en héritage."], ["deux", "pagne", "Les deux", "Apprendre en contribuant, à mon rythme."]]
         .map(([v, icn, t, d]) => `<button class="choix-carte" role="radio" aria-checked="${S.objectif === v}" data-a="choisir" data-k="objectif" data-v="${v}"><span class="cc-ic">${ic(icn)}</span><span class="cc-txt"><b>${t}</b><span>${d}</span></span><span class="cc-coche">${ic("coche")}</span></button>`).join("")}
     </div>`, `<button class="btn btn-1" data-a="aller" data-v="niveau" ${S.objectif ? "" : "disabled"}>Continuer</button>`);
 
   V.niveau = () => onb(2, "objectif", `
-    <div class="etape-titre"><h1 class="t-1">Votre mooré aujourd'hui</h1><p class="chapo">Pour vous proposer les bonnes leçons et les bonnes phrases. Toutes les voix comptent, même hésitantes.</p></div>
+    <div class="etape-titre"><h1 class="t-1">Votre mooré aujourd’hui</h1><p class="chapo">Pour vous proposer les bonnes leçons et les bonnes phrases. Toutes les voix comptent, même hésitantes.</p></div>
     <div class="choix-cartes" role="radiogroup" aria-label="Votre niveau">
-      ${[["debut", 1, "Je débute", "Quelques mots, ou rien encore."], ["comprend", 2, "Je comprends un peu", "Je suis une conversation simple."], ["parle", 3, "Je le parle tous les jours", "À la maison, au marché, au travail."], ["ecrit", 4, "Je le lis et je l'écris", "Ou je l'enseigne."]]
+      ${[["debut", 1, "Je débute", "Quelques mots, ou rien encore."], ["comprend", 2, "Je comprends un peu", "Je suis une conversation simple."], ["parle", 3, "Je le parle tous les jours", "À la maison, au marché, au travail."], ["ecrit", 4, "Je le lis et je l’écris", "Ou je l’enseigne."]]
         .map(([v, n, t, d]) => `<button class="choix-carte" role="radio" aria-checked="${S.niveauMoore === v}" data-a="choisir" data-k="niveauMoore" data-v="${v}"><span class="cc-ic"><span class="signal" aria-hidden="true">${[1, 2, 3, 4].map(k => `<i class="${k <= n ? "on" : ""}"></i>`).join("")}</span></span><span class="cc-txt"><b>${t}</b><span>${d}</span></span><span class="cc-coche">${ic("coche")}</span></button>`).join("")}
     </div>`, `<button class="btn btn-1" data-a="aller" data-v="voix" ${S.niveauMoore ? "" : "disabled"}>Continuer</button>`);
 
   const groupeChoix = (cle, titre, opts) => `<div class="champ"><span class="legende" id="g-${cle}">${titre}</span><div class="choix" role="radiogroup" aria-labelledby="g-${cle}">${opts.map(o => `<button class="puce-choix" role="radio" aria-checked="${S[cle] === o}" data-a="choisir" data-k="${cle}" data-v="${o}">${o}</button>`).join("")}</div></div>`;
   V.voix = () => onb(3, "niveau", `
-    <div class="etape-titre"><h1 class="t-1">Parlez-nous de votre voix</h1><p class="chapo">Pour que l'archive ressemble au pays : toutes les régions, tous les âges, femmes et hommes. Chaque réponse est facultative.</p></div>
-    <div class="champ"><label for="prenom">Votre prénom ou surnom</label><div class="saisie"><input id="prenom" class="texte" autocomplete="given-name" value="${esc(S.prenom)}" maxlength="30"></div><span class="aide">Pour vous saluer. Il n'apparaît jamais à côté de votre voix.</span></div>
+    <div class="etape-titre"><h1 class="t-1">Parlez-nous de votre voix</h1><p class="chapo">Pour que l’archive ressemble au pays : toutes les régions, tous les âges, femmes et hommes. Chaque réponse est facultative.</p></div>
+    <div class="champ"><label for="prenom">Votre prénom ou surnom</label><div class="saisie"><input id="prenom" class="texte" autocomplete="given-name" value="${esc(S.prenom)}" maxlength="30"></div><span class="aide">Pour vous saluer. Il n’apparaît jamais à côté de votre voix.</span></div>
     ${groupeChoix("genre", "Vous êtes", ["Une femme", "Un homme", "Je préfère ne pas répondre"])}
-    ${groupeChoix("age", "Votre âge", ["18 à 25 ans", "26 à 40 ans", "41 à 60 ans", "Plus de 60 ans"])}
-    ${groupeChoix("lieu", "Où avez-vous appris le mooré ?", LIEUX)}`,
+    ${groupeChoix("age", "Votre âge", ["18 à 25 ans", "26 à 40 ans", "41 à 60 ans", "Plus de 60 ans"])}
+    ${groupeChoix("lieu", "Où avez-vous appris le mooré ?", LIEUX)}`,
     `<button class="btn btn-1" data-a="aller" data-v="accord">Continuer</button>`);
 
   V.accord = () => onb(4, "voix", `
-    <div class="etape-titre"><h1 class="t-1">Avant votre première phrase</h1><p class="chapo">Quatre points à connaître. Chacun s'écoute en mooré.</p></div>
+    <div class="etape-titre"><h1 class="t-1">Avant votre première phrase</h1><p class="chapo">Quatre points à connaître. Chacun s’écoute en mooré.</p></div>
     <div class="points-accord">
       ${[["Ce que nous enregistrons", "Votre voix quand vous lisez ou traduisez une phrase, et les réponses de votre profil. Jamais votre nom à côté de votre voix."],
          ["Ce que nous en faisons", "Nous entraînons des modèles qui comprennent et parlent le mooré. SANKOFA peut les vendre ou les utiliser dans ses services."],
          ["Ce que vous recevez", "Un paiement pour chaque minute validée, versé sur votre numéro mobile money."],
-         ["Vous pouvez arrêter", "À tout moment, depuis votre profil. Vos enregistrements sortent des prochaines versions du corpus ; une version déjà publiée ne change plus."]]
+         ["Vous pouvez arrêter", "À tout moment, depuis votre profil. Vos enregistrements sortent des prochaines versions du corpus ; une version déjà publiée ne change plus."]]
         .map(([t, d], k) => `<article class="point"><h3><span class="num">${k + 1}</span>${t}</h3><p>${d}</p>${btnEcoute("a" + k, "Écouter en mooré")}</article>`).join("")}
     </div>
-    <label class="case"><input type="checkbox" id="case-accord" data-a="accord" ${S.accord ? "checked" : ""}><span>J'ai compris ces quatre points et j'accepte les <button class="lien" data-a="legal" data-v="conditions">conditions de contribution</button> et la <button class="lien" data-a="legal" data-v="confidentialite">politique de confidentialité</button>.</span></label>
+    <label class="case"><input type="checkbox" id="case-accord" data-a="accord" ${S.accord ? "checked" : ""}><span>J’ai compris ces quatre points et j’accepte les <button class="lien" data-a="legal" data-v="conditions">conditions de contribution</button> et la <button class="lien" data-a="legal" data-v="confidentialite">politique de confidentialité</button>.</span></label>
     <p class="meta">Conditions v1.0 · votre accord est daté et lié à cette version</p>`,
-    `<button class="btn btn-1" data-a="aller" data-v="numero" ${S.accord ? "" : "disabled"}>J'accepte</button>`);
+    `<button class="btn btn-1" data-a="aller" data-v="numero" ${S.accord ? "" : "disabled"}>J’accepte</button>`);
 
   const telOk = () => /^\d{2} \d{2} \d{2} \d{2}$/.test(S.tel);
   V.numero = () => {
@@ -1044,7 +1060,7 @@ main:focus { outline: none; }
     <div class="champ"><label for="tel">Numéro de téléphone</label>
       <div class="saisie"><span class="pref">+226</span><input id="tel" inputmode="numeric" autocomplete="tel-national" value="${esc(S.tel)}" aria-describedby="tel-aide tel-err"></div>
       <span class="aide" id="tel-aide">8 chiffres, sans le 00226.</span>
-      <span class="erreur" id="tel-err" role="alert">${telOk() ? "" : "Il manque des chiffres : un numéro du Burkina en compte 8."}</span></div>
+      <span class="erreur" id="tel-err" role="alert">${telOk() ? "" : "Il manque des chiffres : un numéro du Burkina en compte 8."}</span></div>
     ${S.connexion ? "" : `<div class="champ"><span class="legende" id="op-l">Opérateur</span><div class="choix" role="radiogroup" aria-labelledby="op-l">${[["orange", "Orange Money"], ["moov", "Moov Money"]].map(([id, lib]) => `<button class="puce-choix avec-op" role="radio" aria-checked="${S.op === id}" data-a="choisir" data-k="op" data-v="${id}"><span class="op ${id}"></span>${lib}</button>`).join("")}</div></div>`}`;
     const pied = `<button class="btn btn-1" id="btn-tel" data-a="aller" data-v="pin" ${telOk() ? "" : "disabled"}>Continuer</button>`;
     return S.connexion ? { focus: true, tete: `<header class="focus-tete"><div><button class="ic-btn" data-a="aller" data-v="bienvenue" aria-label="Revenir">${ic("retour")}</button><span></span><span></span></div></header>`, main: corps, pied } : onb(5, "accord", corps, pied);
@@ -1052,7 +1068,7 @@ main:focus { outline: none; }
 
   V.pin = () => {
     const corps = `
-    <div class="etape-titre"><h1 class="t-1">${S.connexion ? "Votre code" : "Choisissez un code à 4 chiffres"}</h1><p class="chapo">${S.connexion ? "Cinq essais faux bloquent le compte 15 minutes." : "Vous le taperez à chaque connexion. Ne le donnez à personne, même à l'équipe."}</p></div>
+    <div class="etape-titre"><h1 class="t-1">${S.connexion ? "Votre code" : "Choisissez un code à 4 chiffres"}</h1><p class="chapo">${S.connexion ? "Cinq essais faux bloquent le compte 15 minutes." : "Vous le taperez à chaque connexion. Ne le donnez à personne, même à l’équipe."}</p></div>
     <div class="pin-points" role="img" aria-label="${S.pin.length} chiffres sur 4">${[0, 1, 2, 3].map(i => `<span class="${i < S.pin.length ? "plein" : ""}"></span>`).join("")}</div>
     <div class="pave">${["1", "2", "3", "4", "5", "6", "7", "8", "9", "", "0", "⌫"].map(k => k === "" ? '<button class="vide" tabindex="-1" aria-hidden="true"></button>' : `<button data-a="pin" data-v="${k}" class="${k === "⌫" ? "efface" : ""}" aria-label="${k === "⌫" ? "Effacer" : k}">${k === "⌫" ? "Effacer" : k}</button>`).join("")}</div>`;
     const pied = `<button class="btn btn-1" data-a="pin-ok" ${S.pin.length === 4 ? "" : "disabled"}>${S.connexion ? "Me connecter" : "Valider mon code"}</button>`;
@@ -1064,18 +1080,18 @@ main:focus { outline: none; }
     return { focus: true, tete: "", cls: "pret", main: `
     <div class="fete">
       <div class="sceau" aria-hidden="true">${ic("coche")}</div>
-      <p class="sur-titre">Bienvenue dans l'archive</p>
+      <p class="sur-titre">Bienvenue dans l’archive</p>
       <h1>${S.prenom ? `${esc(S.prenom)}, votre voix` : "Votre voix"} a sa place ici.</h1>
-      <p class="chapo">Votre premier cadeau : <b>20 cauris</b>. Allumez votre feu aujourd'hui : une leçon ou cinq phrases suffisent.</p>
-      <div class="puce" style="height:44px;font-size:17px;padding-right:16px">${cauris()}<span>+20 cauris</span></div>
+      <p class="chapo">Votre premier cadeau : <b>20 cauris</b>. Allumez votre feu aujourd’hui : une leçon ou cinq phrases suffisent.</p>
+      <div class="puce" style="height:44px;font-size:17px;padding-right:16px">${cauris()}<span>+20 cauris</span></div>
     </div>`,
-      pied: `<button class="btn btn-1" data-a="lancer" data-v="${apprendre ? "lecon" : "parler"}">${apprendre ? "Commencer ma première leçon" : "Dire ma première phrase"}</button><button class="btn btn-3" data-a="aller" data-v="accueil">Aller à l'accueil</button>` };
+      pied: `<button class="btn btn-1" data-a="lancer" data-v="${apprendre ? "lecon" : "parler"}">${apprendre ? "Commencer ma première leçon" : "Dire ma première phrase"}</button><button class="btn btn-3" data-a="aller" data-v="accueil">Aller à l’accueil</button>` };
   };
 
   // --- Accueil ---
   V.accueil = () => {
     const h = new Date().getHours();
-    const [sal, salFr] = h < 12 ? ["Ne y yibeoogo", "Bonjour, le matin"] : h < 17 ? ["Ne y wĩndga", "Bonjour, l'après-midi"] : ["Ne y zaabre", "Bonsoir"];
+    const [sal, salFr] = h < 12 ? ["Ne y yibeoogo", "Bonjour, le matin"] : h < 17 ? ["Ne y wĩndga", "Bonjour, l’après-midi"] : ["Ne y zaabre", "Bonsoir"];
     const reste = Math.max(0, S.objectifJour - S.faitJour);
     const pct = Math.min(100, Math.round(S.faitJour / S.objectifJour * 100));
     const fait = S.clips.filter(Boolean).length;
@@ -1087,21 +1103,21 @@ main:focus { outline: none; }
           <h1 class="t-salut"><span class="moore" lang="mos">${sal}</span>${S.prenom ? `, ${esc(S.prenom)}` : ""}</h1>
           <div class="salut-sous"><span>${salFr}, en mooré.</span>${btnEcoute("salut", "Écouter")}</div>
         </div>
-        <div class="anneau" role="img" aria-label="Objectif du jour : ${S.faitJour} phrases sur ${S.objectifJour}"><svg viewBox="0 0 64 64"><circle class="fond" cx="32" cy="32" r="27"/><circle class="val" cx="32" cy="32" r="27" pathLength="100" stroke-dasharray="${pct} 100"/></svg><b><span>${S.faitJour}/${S.objectifJour}<small>du jour</small></span></b></div>
+        <div class="anneau" role="img" aria-label="Objectif du jour : ${S.faitJour} phrases sur ${S.objectifJour}"><svg viewBox="0 0 64 64"><circle class="fond" cx="32" cy="32" r="27"/><circle class="val" cx="32" cy="32" r="27" pathLength="100" stroke-dasharray="${pct} 100"/></svg><b><span>${S.faitJour}/${S.objectifJour}<small>du jour</small></span></b></div>
       </section>
       <article class="mission" aria-labelledby="mission-t">
         <div class="mission-corps">
           <p class="sur-titre clair">Mission du jour · Au marché</p>
           <h2 id="mission-t" class="mission-t">Dites cinq phrases du marché en mooré</h2>
-          <div class="mission-meta"><span>${ic("horloge")}≈ 2 min</span><span>${cauris()}+50 cauris</span><span>${ic("portefeuille")}≈ 30 FCFA</span></div>
+          <div class="mission-meta"><span>${ic("horloge")}≈ 2 min</span><span>${cauris()}+50 cauris</span><span>${ic("portefeuille")}≈ 30 FCFA</span></div>
           ${trame(5, fait, fait, true)}
           <button class="btn btn-clair" data-a="lancer" data-v="parler">${fait ? `Continuer · ${fait} sur 5` : "Commencer"}</button>
         </div>
       </article>
-      <p class="petit muet" style="margin-top:-6px">${reste ? `Encore ${reste} phrase${reste > 1 ? "s" : ""} aujourd'hui pour garder votre feu allumé.` : "Objectif du jour atteint. Votre feu brûle."}</p>
+      <p class="petit muet" style="margin-top:-6px">${reste ? `Encore ${reste} phrase${reste > 1 ? "s" : ""} aujourd’hui pour garder votre feu allumé.` : "Objectif du jour atteint. Votre feu brûle."}</p>
       <article class="carte suite-lecon">
         <span class="losange-mini" aria-hidden="true">${ic("livre")}</span>
-        <div><p class="sur-titre">Apprendre · Unité 2</p><h2 class="t-3" style="margin-top:4px">Se saluer · leçon 3 sur 5</h2><div class="barre" role="img" aria-label="40 %"><i style="width:40%"></i></div></div>
+        <div><p class="sur-titre">Apprendre · Unité 2</p><h2 class="t-3" style="margin-top:4px">Se saluer · leçon 3 sur 5</h2><div class="barre" role="img" aria-label="40 %"><i style="width:40%"></i></div></div>
         <button class="btn btn-1 btn-court" data-a="lancer" data-v="lecon">Reprendre</button>
       </article>
       <div class="tete-section"><h2 class="t-2">Prêter sa voix autrement</h2></div>
@@ -1115,16 +1131,16 @@ main:focus { outline: none; }
         <p class="sur-titre">Le mot du jour</p>
         <div class="mot-ligne"><span class="mot-mo" lang="mos">Laafi</span>${btnEcoute("mot", "Écouter Laafi", true)}</div>
         <p class="mot-fr">La santé, la paix.</p>
-        <p class="petit muet">On le dit en saluant : <span class="moore" lang="mos">« Laafi bala ? »</span> On répond : <span class="moore" lang="mos">« Laafi bala. »</span></p>
+        <p class="petit muet">On le dit en saluant : <span class="moore" lang="mos">« Laafi bala ? »</span> On répond : <span class="moore" lang="mos">« Laafi bala. »</span></p>
       </article>`, rail: railAccueil() };
   };
   const geste = (v, icn, t, d, g) => `<button class="geste" data-a="lancer" data-v="${v}"><span class="geste-ic${v === "ecouter" ? " or" : ""}">${ic(icn)}</span><b>${t}</b><span class="d">${d}</span><span class="gain">${cauris()}+${g}</span></button>`;
-  const pagneMini = () => `<button class="pagne-mini" data-a="aller" data-v="heritage"><canvas class="cv-pagne" data-sens="h" data-progres=".34" data-u="3" data-anime="1" aria-hidden="true"></canvas><span class="txt"><span class="sur-titre clair">Le pagne 2026</span><p><b>3,4 h</b> de voix tissées sur 10. Votre fil : <b>${nb(S.phrasesDites)} phrases</b>.</p></span></button>`;
+  const pagneMini = () => `<button class="pagne-mini" data-a="aller" data-v="heritage"><canvas class="cv-pagne" data-sens="h" data-progres=".34" data-u="3" data-anime="1" aria-hidden="true"></canvas><span class="txt"><span class="sur-titre clair">Le pagne 2026</span><p><b>3,4 h</b> de voix tissées sur 10. Votre fil : <b>${nb(S.phrasesDites)} phrases</b>.</p></span></button>`;
   const villes = (n = 6) => `<div class="villes">${VILLES.slice(0, n).map(([v, k]) => `<div class="ville"><span>${v}</span><div class="barre"><i style="width:${Math.round(k / VILLES[0][1] * 100)}%"></i></div><span class="n">${nb(k)}</span></div>`).join("")}</div>`;
-  const bonus = () => `<div class="encart">${ic("etincelle")}<div><p><b>Bonus diversité cette semaine.</b> Les phrases dites par des personnes de plus de 60 ans, et depuis Manga ou Ziniaré, comptent double.</p><p class="petit" style="margin-top:6px">Invitez une aînée ou un aîné à créer son propre compte.</p></div></div>`;
+  const bonus = () => `<div class="encart">${ic("etincelle")}<div><p><b>Bonus diversité cette semaine.</b> Les phrases dites par des personnes de plus de 60 ans, et depuis Manga ou Ziniaré, comptent double.</p><p class="petit" style="margin-top:6px">Invitez une aînée ou un aîné à créer son propre compte.</p></div></div>`;
   const railAccueil = () => `<div class="rail-int">
       ${pagneMini()}
-      <section class="carte" style="display:grid;gap:14px"><div class="tete-section" style="margin:0"><h2 class="t-2">Villes qui tissent</h2><span class="exemple">exemple</span></div>${villes(4)}<button class="lien petit" style="justify-self:start" data-a="aller" data-v="heritage">Voir tout l'héritage</button></section>
+      <section class="carte" style="display:grid;gap:14px"><div class="tete-section" style="margin:0"><h2 class="t-2">Villes qui tissent</h2><span class="exemple">exemple</span></div>${villes(4)}<button class="lien petit" style="justify-self:start" data-a="aller" data-v="heritage">Voir tout l’héritage</button></section>
       ${bonus()}
     </div>`;
 
@@ -1141,7 +1157,7 @@ main:focus { outline: none; }
       </div>`;
     }).join("");
     return { onglet: "apprendre", main: `
-      <header class="tete-ecran"><p class="sur-titre">Apprendre</p><h1 class="t-1">Le chemin du mooré</h1><p class="chapo">Des leçons de cinq minutes, à l'oreille. Les voix que vous entendez viennent de l'archive : des locuteurs du Burkina, validées par la communauté.</p></header>
+      <header class="tete-ecran"><p class="sur-titre">Apprendre</p><h1 class="t-1">Le chemin du mooré</h1><p class="chapo">Des leçons de cinq minutes, à l’oreille. Les voix que vous entendez viennent de l’archive : des locuteurs du Burkina, validées par la communauté.</p></header>
       ${uniteCarte(0)}
       ${uniteCarte(1)}
       <div class="chemin" id="chemin"><svg class="trace" aria-hidden="true"></svg>${noeuds}</div>
@@ -1168,7 +1184,7 @@ main:focus { outline: none; }
         <div class="stat">${ic("livre")}<b>${S.mots}</b><span>mots appris</span></div>
         <div class="stat">${ic("coche")}<b>${S.lecons}</b><span>leçons faites</span></div>
       </section>
-      <div class="encart violet">${ic("info")}<p>Chaque prononciation que vous répétez peut rejoindre l'archive, si vous le choisissez à la fin de l'exercice.</p></div>
+      <div class="encart violet">${ic("info")}<p>Chaque prononciation que vous répétez peut rejoindre l’archive, si vous le choisissez à la fin de l’exercice.</p></div>
     </div>`;
 
   // --- Leçon ---
@@ -1178,8 +1194,8 @@ main:focus { outline: none; }
     const ex = LECON[L.i];
     let corps = "", pied = "";
     const verdict = () => L.juste
-      ? `<div class="verdict ok" role="status"><div class="verdict-tete"><span class="rond">${ic("coche")}</span><div><b lang="mos">Yaa sõama !</b><span>C'est juste.</span></div></div><p>${ex.sens || ""}</p><button class="btn btn-ok" data-a="le-suite">Continuer</button></div>`
-      : `<div class="verdict ko" role="status"><div class="verdict-tete"><span class="rond">${ic("refaire")}</span><div><b>Presque.</b><span>La bonne réponse : <span class="moore" lang="mos">${ex.opts[ex.ok]}</span></span></div></div><p>${ex.sens || ""}</p><button class="btn btn-terre" data-a="le-suite">Continuer</button></div>`;
+      ? `<div class="verdict ok" role="status"><div class="verdict-tete"><span class="rond">${ic("coche")}</span><div><b lang="mos">Yaa sõama !</b><span>C’est juste.</span></div></div><p>${ex.sens || ""}</p><button class="btn btn-ok" data-a="le-suite">Continuer</button></div>`
+      : `<div class="verdict ko" role="status"><div class="verdict-tete"><span class="rond">${ic("refaire")}</span><div><b>Presque.</b><span>La bonne réponse : <span class="moore" lang="mos">${ex.opts[ex.ok]}</span></span></div></div><p>${ex.sens || ""}</p><button class="btn btn-terre" data-a="le-suite">Continuer</button></div>`;
     if (ex.type === "decouvre") {
       corps = `<p class="sur-titre">Nouveau mot</p>
         <article class="invite decouverte">
@@ -1207,20 +1223,20 @@ main:focus { outline: none; }
           <div class="col">${ex.paires.map((p, k) => tuileP("g", k, p[0], true)).join("")}</div>
           <div class="col">${L.ordre.map(k => tuileP("d", k, ex.paires[k][1], false)).join("")}</div>
         </div>`;
-      pied = fini ? `<div class="verdict ok" role="status"><div class="verdict-tete"><span class="rond">${ic("coche")}</span><div><b lang="mos">Barka !</b><span>Merci, toutes les paires sont trouvées.</span></div></div><button class="btn btn-ok" data-a="le-suite">Continuer</button></div>` : `<p class="astuce" style="display:block">Touchez un mot à gauche, puis son sens à droite.</p>`;
+      pied = fini ? `<div class="verdict ok" role="status"><div class="verdict-tete"><span class="rond">${ic("coche")}</span><div><b lang="mos">Barka !</b><span>Merci, toutes les paires sont trouvées.</span></div></div><button class="btn btn-ok" data-a="le-suite">Continuer</button></div>` : `<p class="astuce" style="display:block">Touchez un mot à gauche, puis son sens à droite.</p>`;
     } else if (ex.type === "repete") {
       const enreg = Micro.etat === "enreg", clip = L.enreg;
       corps = `<p class="sur-titre">Répéter</p><h1 class="question">Écoutez, puis dites-le à votre tour.</h1>
         <article class="invite" style="justify-items:center;text-align:center">
           <span class="phrase-mo" lang="mos">${ex.mo}</span><span class="sens">${ex.fr}</span>
-          ${btnEcoute("le-ref", L.refEcoutee ? "Réécouter la voix de l'archive" : "Écouter la voix de l'archive")}
+          ${btnEcoute("le-ref", L.refEcoutee ? "Réécouter la voix de l’archive" : "Écouter la voix de l’archive")}
         </article>
-        <div class="tama"><canvas id="cv-tama" aria-hidden="true"></canvas><button class="micro${enreg ? " enreg" : ""}" data-a="micro" ${!L.refEcoutee && !enreg ? "disabled" : ""} aria-label="${enreg ? "Arrêter l'enregistrement" : "Commencer l'enregistrement"}">${ic(enreg ? "stop" : "micro")}</button></div>
-        <p class="indic" aria-live="polite">${enreg ? `<span class="chrono" id="chrono">0,0 s</span><span>À vous : dites <span class="moore">${ex.mo}</span></span>` : clip ? "<b>Très bien.</b> Comparez votre voix avec celle de l'archive." : L.refEcoutee ? "Touchez le micro, puis répétez." : "Écoutez d'abord : le micro s'active ensuite."}</p>
+        <div class="tama"><canvas id="cv-tama" aria-hidden="true"></canvas><button class="micro${enreg ? " enreg" : ""}" data-a="micro" ${!L.refEcoutee && !enreg ? "disabled" : ""} aria-label="${enreg ? "Arrêter l’enregistrement" : "Commencer l’enregistrement"}">${ic(enreg ? "stop" : "micro")}</button></div>
+        <p class="indic" aria-live="polite">${enreg ? `<span class="chrono" id="chrono">0,0 s</span><span>À vous : dites <span class="moore">${ex.mo}</span></span>` : clip ? "<b>Très bien.</b> Comparez votre voix avec celle de l’archive." : L.refEcoutee ? "Touchez le micro, puis répétez." : "Écoutez d’abord : le micro s’active ensuite."}</p>
         ${clip && !enreg ? `<div class="carte comparer">
-          <div class="ligne"><span>Archive</span>${ondeHTML(LECON_REF, "ref", "ref")}<span class="meta">1,6 s</span></div>
+          <div class="ligne"><span>Archive</span>${ondeHTML(LECON_REF, "ref", "ref")}<span class="meta">1,6 s</span></div>
           <div class="ligne"><span>Vous</span>${ondeHTML(clip.onde, "le-moi", "moi")}<button class="ecoute seul" data-a="ecoute-clip" data-v="le" aria-label="Réécouter ma voix" style="width:40px;height:40px"><span class="rond" style="width:40px;height:40px">${ic(S.lecture === "clip-le" ? "pause" : "jouer")}</span></button></div>
-          <div class="bascule" style="border-top:1px dashed var(--filet-2);padding-top:12px"><span>Ajouter ma prononciation à l'archive<br><small class="muet">Elle sera écoutée par d'autres avant d'être gardée.</small></span><button class="interrupteur" role="switch" aria-checked="${L.archive}" aria-label="Ajouter ma prononciation à l'archive" data-a="le-archive"></button></div>
+          <div class="bascule" style="border-top:1px dashed var(--filet-2);padding-top:12px"><span>Ajouter ma prononciation à l’archive<br><small class="muet">Elle sera écoutée par d’autres avant d’être gardée.</small></span><button class="interrupteur" role="switch" aria-checked="${L.archive}" aria-label="Ajouter ma prononciation à l’archive" data-a="le-archive"></button></div>
         </div>` : ""}`;
       pied = clip && !enreg ? `<div class="rangee"><button class="btn btn-2" data-a="le-refaire">${ic("refaire")}Refaire</button><button class="btn btn-1" data-a="le-suite">Continuer</button></div>` : `<button class="btn btn-3" data-a="le-suite" ${enreg ? "disabled" : ""}>Je ne peux pas parler maintenant</button>`;
     }
@@ -1245,7 +1261,7 @@ main:focus { outline: none; }
         <div><b>+${15 + (prec === 100 ? 5 : 0)}</b><span>cauris${prec === 100 ? ", dont 5 sans faute" : ""}</span></div>
         <div><b>4</b><span>mots revus</span></div>
       </div>
-      ${L.enreg && L.archive ? `<div class="encart violet">${ic("pagne")}<p><b>Votre prononciation rejoint l'archive.</b> D'autres l'écouteront avant qu'elle soit gardée.</p></div>` : ""}`,
+      ${L.enreg && L.archive ? `<div class="encart violet">${ic("pagne")}<p><b>Votre prononciation rejoint l’archive.</b> D’autres l’écouteront avant qu’elle soit gardée.</p></div>` : ""}`,
       pied: `<button class="btn btn-1" data-a="aller" data-v="apprendre">Continuer le chemin</button><button class="btn btn-3" data-a="lancer" data-v="parler">Prêter ma voix</button>` };
   }
 
@@ -1254,12 +1270,12 @@ main:focus { outline: none; }
     const fait = S.clips.filter(Boolean).length;
     return { onglet: "contribuer", main: `
       ${reseauBande()}
-      <header class="tete-ecran"><p class="sur-titre">Contribuer</p><h1 class="t-1">Prêter sa voix</h1><p class="chapo">Chaque phrase validée rejoint l'archive et vous est payée : 100 FCFA la minute validée, 5 FCFA l'écoute validée.</p><span class="exemple">Tarifs d'exemple, à fixer</span></header>
+      <header class="tete-ecran"><p class="sur-titre">Contribuer</p><h1 class="t-1">Prêter sa voix</h1><p class="chapo">Chaque phrase validée rejoint l’archive et vous est payée : 100 FCFA la minute validée, 5 FCFA l’écoute validée.</p><span class="exemple">Tarifs d’exemple, à fixer</span></header>
       <article class="mission" aria-labelledby="mission-c">
         <div class="mission-corps">
           <p class="sur-titre clair">Mission du jour · Au marché</p>
-          <h2 id="mission-c" class="mission-t">Cinq phrases du marché, dites en mooré</h2>
-          <div class="mission-meta"><span>${ic("horloge")}≈ 2 min</span><span>${cauris()}+50 cauris</span><span>${ic("portefeuille")}≈ 30 FCFA</span></div>
+          <h2 id="mission-c" class="mission-t">Dites cinq phrases du marché en mooré</h2>
+          <div class="mission-meta"><span>${ic("horloge")}≈ 2 min</span><span>${cauris()}+50 cauris</span><span>${ic("portefeuille")}≈ 30 FCFA</span></div>
           ${trame(5, fait, fait, true)}
           <button class="btn btn-clair" data-a="lancer" data-v="parler">${fait ? `Continuer · ${fait} sur 5` : "Commencer"}</button>
         </div>
@@ -1276,30 +1292,31 @@ main:focus { outline: none; }
   };
   const railContribuer = () => `<div class="rail-int">
       <section class="solde"><p class="sur-titre clair">Solde à recevoir</p><div class="montant">${nb(1250)}<small>FCFA</small></div><span class="sous-ligne">Versement vendredi · Orange Money</span></section>
-      ${S.attente ? `<div class="encart">${ic("horsligne")}<p><b>${S.attente} lot en attente d'envoi.</b> Il partira seul dès que le réseau revient.</p></div>` : ""}
-      <section class="carte" style="display:grid;gap:10px"><h2 class="t-2">Comment c'est vérifié</h2><p class="petit" style="color:var(--encre-2)">Deux écoutes concordantes valident un enregistrement. On ne valide jamais sa propre voix. Les cas douteux passent par l'équipe.</p></section>
+      ${S.attente ? `<div class="encart">${ic("horsligne")}<p><b>${S.attente} lot en attente d’envoi.</b> Il partira seul dès que le réseau revient.</p></div>` : ""}
+      <section class="carte" style="display:grid;gap:10px"><h2 class="t-2">Comment c’est vérifié</h2><p class="petit" style="color:var(--encre-2)">Deux écoutes concordantes valident un enregistrement. On ne valide jamais sa propre voix. Les cas douteux passent par l’équipe.</p></section>
     </div>`;
 
   // --- Parler / Lire ---
+  const insec = (t) => t.replace(/(\S+-\S+)/g, '<span class="insec">$1</span>');
   const listeSeance = () => S.piste === "A" ? PARLER : LIRE;
   V.parler = () => {
     const L = listeSeance(), p = L[S.index], clip = S.clips[S.index], enreg = Micro.etat === "enreg";
     const fait = S.clips.filter(Boolean).length, dernier = fait >= 5;
     const qc = clip && !enreg ? `<div class="badges">${clip.court ? `<span class="badge or">${ic("info")}Un peu court</span>` : `<span class="badge vert">${ic("coche")}Durée correcte</span>`}${clip.faible ? `<span class="badge or">${ic("info")}Voix faible</span>` : `<span class="badge vert">${ic("coche")}Voix claire</span>`}${clip.sature ? `<span class="badge or">${ic("info")}Un peu fort</span>` : `<span class="badge vert">${ic("coche")}Sans saturation</span>`}</div>` : "";
-    const indic = enreg ? `<span class="chrono" id="chrono">0,0 s</span><span>Parlez maintenant, puis touchez le carré.</span>`
-      : clip ? (clip.court ? "La phrase entière est-elle dite ? Réécoutez, ou refaites-la." : `<span><span class="moore" lang="mos">Barka !</span> Votre voix est gardée.</span><span class="petit muet">Barka : merci.</span>`)
+    const indic = enreg ? `<span class="chrono" id="chrono">0,0 s</span><span>Parlez maintenant, puis touchez le carré.</span>`
+      : clip ? (clip.court ? "La phrase entière est-elle dite ? Réécoutez, ou refaites-la." : `<span><span class="moore" lang="mos">Barka !</span> Votre voix est gardée.</span><span class="petit muet">Barka : merci.</span>`)
       : fait ? "<b>Merci.</b> Touchez le micro pour cette phrase." : "Touchez le micro, puis dites la phrase.";
     return { focus: true, tete: teteSeance("contribuer", 5, fait, S.index, S.neuf), main: `
       ${reseauBande()}
       <div class="seance-info"><span class="badge">${p.cat}</span><span class="petit muet">Phrase ${S.index + 1} sur 5</span></div>
       <article class="invite">
-        <p class="consigne">${S.piste === "A" ? "Dites cette phrase en mooré, avec vos mots, comme à un proche." : "Lisez cette phrase à voix haute, telle qu'elle est écrite."}</p>
-        ${S.piste === "A" ? `<p class="phrase-fr">${p.fr}</p>` : `<p class="phrase-mo" lang="mos">${p.mo}</p><p class="sens">${p.fr}</p>`}
+        <p class="consigne">${S.piste === "A" ? "Dites cette phrase en mooré, avec vos mots, comme à un proche." : "Lisez cette phrase à voix haute, telle qu’elle est écrite."}</p>
+        ${S.piste === "A" ? `<p class="phrase-fr">${insec(p.fr)}</p>` : `<p class="phrase-mo" lang="mos">${p.mo}</p><p class="sens">${p.fr}</p>`}
         ${p.note ? `<p class="note">${ic("info")}<span>${p.note}</span></p>` : ""}
       </article>
-      <div class="tama"><canvas id="cv-tama" aria-hidden="true"></canvas><button class="micro${enreg ? " enreg" : ""}" data-a="micro" aria-label="${enreg ? "Arrêter l'enregistrement" : "Commencer l'enregistrement"}">${ic(enreg ? "stop" : "micro")}</button></div>
+      <div class="tama"><canvas id="cv-tama" aria-hidden="true"></canvas><button class="micro${enreg ? " enreg" : ""}" data-a="micro" aria-label="${enreg ? "Arrêter l’enregistrement" : "Commencer l’enregistrement"}">${ic(enreg ? "stop" : "micro")}</button></div>
       <p class="indic" aria-live="polite">${indic}</p>
-      ${clip && !enreg ? clipLigne(S.index, clip) + qc : `<p class="astuce">Astuce : <kbd>Espace</kbd> pour enregistrer et arrêter.</p>`}`,
+      ${clip && !enreg ? clipLigne(S.index, clip) + qc : `<p class="astuce">Astuce : <kbd>Espace</kbd> pour enregistrer et arrêter.</p>`}`,
       pied: clip && !enreg
         ? `<div class="rangee"><button class="btn btn-2" data-a="refaire" data-i="${S.index}">${ic("refaire")}Refaire</button><button class="btn btn-1" data-a="${dernier ? "revue" : "suivante"}">${dernier ? "Réécouter le lot" : "Phrase suivante"}</button></div>`
         : `<button class="btn btn-3" data-a="passer" ${enreg ? "disabled" : ""}>Passer cette phrase</button>` };
@@ -1318,11 +1335,11 @@ main:focus { outline: none; }
     const fcfa = Math.max(1, Math.round(total / 60 * 100));
     return { focus: true, tete: teteSeance("contribuer", 5, 5, -1), main: `
       ${reseauBande()}
-      <div class="etape-titre"><p class="sur-titre">Lot terminé</p><h1 class="t-1">Réécoutez avant d'envoyer</h1><p class="chapo">Refaites un clip si un mot manque, si la fin est coupée ou si une autre voix s'entend.</p></div>
+      <div class="etape-titre"><p class="sur-titre">Lot terminé</p><h1 class="t-1">Réécoutez avant d’envoyer</h1><p class="chapo">Refaites un clip si un mot manque, si la fin est coupée ou si une autre voix s’entend.</p></div>
       <div style="display:grid;gap:8px">${S.clips.map((c, i) => c ? clipLigne(i, c) : "").join("")}</div>
-      <div class="resume"><div><b>${sec(total)}</b><span>de voix</span></div><div><b>+50</b><span>cauris à l'envoi</span></div><div><b>≈ ${fcfa} F</b><span>si tout est validé</span></div></div>
-      <label class="case"><input type="checkbox" id="case-confirme" data-a="confirme" ${S.confirme ? "checked" : ""}><span>Ces enregistrements sont ma propre voix, et j'ai dit les phrases demandées.</span></label>`,
-      pied: `<button class="btn btn-1" data-a="envoyer" ${S.confirme ? "" : "disabled"}>${S.horsLigne ? "Garder pour l'envoi" : "Envoyer à l'archive"}</button>` };
+      <div class="resume"><div><b>${sec(total)}</b><span>de voix</span></div><div><b>+50</b><span>cauris à l’envoi</span></div><div><b>≈ ${fcfa} F</b><span>si tout est validé</span></div></div>
+      <label class="case"><input type="checkbox" id="case-confirme" data-a="confirme" ${S.confirme ? "checked" : ""}><span>Ces enregistrements sont ma propre voix, et j’ai dit les phrases demandées.</span></label>`,
+      pied: `<button class="btn btn-1" data-a="envoyer" ${S.confirme ? "" : "disabled"}>${S.horsLigne ? "Garder pour l’envoi" : "Envoyer à l’archive"}</button>` };
   };
 
   V.envoye = () => {
@@ -1331,8 +1348,8 @@ main:focus { outline: none; }
       <div class="fete">
         <div class="sceau" aria-hidden="true">${ic(S.horsLigne ? "horsligne" : "pagne")}</div>
         <p class="sur-titre">${S.horsLigne ? "Lot gardé sur le téléphone" : "Lot envoyé"}</p>
-        <h1>${S.horsLigne ? "Votre voix attend le réseau." : "Votre voix est tissée dans l'archive."}</h1>
-        <p class="chapo">${S.horsLigne ? "Il partira seul dès que le réseau revient. Vous pouvez fermer l'application." : "D'autres contributeurs vont l'écouter. Vous verrez le gain dans votre profil une fois validé."}</p>
+        <h1>${S.horsLigne ? "Votre voix attend le réseau." : "Votre voix est tissée dans l’archive."}</h1>
+        <p class="chapo">${S.horsLigne ? "Il partira seul dès que le réseau revient. Vous pouvez fermer l’application." : "D’autres contributeurs vont l’écouter. Vous verrez le gain dans votre profil une fois validé."}</p>
       </div>
       ${S.horsLigne ? "" : `<section class="carte" style="display:grid;gap:12px;text-align:center;justify-items:center">
         <p class="sur-titre">Phrases dans le pagne 2026</p>
@@ -1341,10 +1358,10 @@ main:focus { outline: none; }
       </section>`}
       <div class="resume">
         <div><b>+50</b><span>cauris</span></div>
-        <div><b>${S.feu}</b><span>jours de feu${e.nouveauFeu ? ", entretenu aujourd'hui" : ""}</span></div>
+        <div><b>${S.feu}</b><span>jours de feu${e.nouveauFeu ? ", entretenu aujourd’hui" : ""}</span></div>
         <div><b>${S.faitJour}/${S.objectifJour}</b><span>objectif du jour</span></div>
       </div>`,
-      pied: `<button class="btn btn-1" data-a="nouveau-lot">Encore un lot</button><button class="btn btn-3" data-a="aller" data-v="accueil">Retour à l'accueil</button>` };
+      pied: `<button class="btn btn-1" data-a="nouveau-lot">Encore un lot</button><button class="btn btn-3" data-a="aller" data-v="accueil">Retour à l’accueil</button>` };
   };
 
   // --- Écouter (validation par les pairs) ---
@@ -1352,18 +1369,18 @@ main:focus { outline: none; }
     const e = S.ec, p = ECOUTE[e.i % ECOUTE.length];
     if (!e.onde) e.onde = ondeAlea(40);
     return { focus: true, tete: teteSeance("contribuer", 5, e.fait, e.fait), main: `
-      <div class="seance-info"><span class="badge or">${ic("casque")}Voix d'un autre contributeur</span><span class="petit muet">Écoute ${e.fait + 1} sur 5</span></div>
+      <div class="seance-info"><span class="badge or">${ic("casque")}Voix d’un autre contributeur</span><span class="petit muet">Écoute ${e.fait + 1} sur 5</span></div>
       <article class="invite">
-        <p class="consigne">Cette voix dit-elle exactement la phrase ?</p>
+        <p class="consigne">Cette voix dit-elle exactement la phrase ?</p>
         <p class="phrase-mo" lang="mos">${p.mo}</p><p class="sens">${p.fr}</p>
       </article>
       <div class="lecteur-zone">
-        <button class="lecteur-rond violet${S.lecture === "pair" ? " joue" : ""}" data-a="ecoute-pair" aria-label="${S.lecture === "pair" ? "Pause" : "Écouter l'enregistrement"}">${ic(S.lecture === "pair" ? "pause" : "jouer")}</button>
+        <button class="lecteur-rond violet${S.lecture === "pair" ? " joue" : ""}" data-a="ecoute-pair" aria-label="${S.lecture === "pair" ? "Pause" : "Écouter l’enregistrement"}">${ic(S.lecture === "pair" ? "pause" : "jouer")}</button>
         ${ondeHTML(e.onde, "pair")}
-        <p class="indic" style="min-height:0">${e.lu ? "Votre avis ?" : "Écoutez jusqu'au bout pour donner votre avis."}</p>
+        <p class="indic" style="min-height:0">${e.lu ? "Votre avis ?" : "Écoutez jusqu’au bout pour donner votre avis."}</p>
       </div>
-      ${e.verdict === "non" ? `<div class="champ"><span class="legende" id="r-l">Qu'est-ce qui ne va pas ?</span><div class="raisons" role="radiogroup" aria-labelledby="r-l">${["Un mot manque ou change", "La fin est coupée", "Trop de bruit", "Une autre voix parle", "Ce n'est pas du mooré"].map(r => `<button class="puce-choix" role="radio" aria-checked="${e.raison === r}" data-a="raison" data-v="${r}">${r}</button>`).join("")}</div></div>` : ""}
-      <p class="petit muet" style="text-align:center">Les accents sont les bienvenus. On juge seulement si la phrase est dite en entier.</p>`,
+      ${e.verdict === "non" ? `<div class="champ"><span class="legende" id="r-l">Qu’est-ce qui ne va pas ?</span><div class="raisons" role="radiogroup" aria-labelledby="r-l">${["Un mot manque ou change", "La fin est coupée", "Trop de bruit", "Une autre voix parle", "Ce n’est pas du mooré"].map(r => `<button class="puce-choix" role="radio" aria-checked="${e.raison === r}" data-a="raison" data-v="${r}">${r}</button>`).join("")}</div></div>` : ""}
+      <p class="petit muet note-centree">Les accents sont les bienvenus. On juge seulement si la phrase est dite en entier.</p>`,
       pied: e.verdict === "non"
         ? `<div class="rangee"><button class="btn btn-2" data-a="vote-annule">Annuler</button><button class="btn btn-1" data-a="vote-envoie" ${e.raison ? "" : "disabled"}>Envoyer</button></div>`
         : `<div class="vote"><button class="btn btn-non" data-a="vote" data-v="non" ${e.lu ? "" : "disabled"}><span style="display:inline-flex;transform:rotate(180deg)">${ic("pouce")}</span>Non</button><button class="btn btn-ok" data-a="vote" data-v="oui" ${e.lu ? "" : "disabled"}>${ic("pouce")}Oui</button></div>` };
@@ -1374,11 +1391,11 @@ main:focus { outline: none; }
     const e = S.ecr, p = ECRIRE[e.i % ECRIRE.length];
     return { focus: true, tete: teteSeance("contribuer", 5, e.fait, e.fait), main: `
       <div class="seance-info"><span class="badge">${p.cat}</span><span class="petit muet">Phrase ${e.fait + 1} sur 5</span></div>
-      <article class="invite"><p class="consigne">Comment le diriez-vous en mooré ?</p><p class="phrase-fr">${p.fr}</p></article>
-      ${e.ok ? `<div class="verdict ok" role="status"><div class="verdict-tete"><span class="rond">${ic("coche")}</span><div><b lang="mos">Barka !</b><span>Votre traduction rejoint la file de relecture.</span></div></div><p class="moore" lang="mos" style="font-size:18px;color:var(--titre)">${esc(e.texte)}</p></div>` : `
+      <article class="invite"><p class="consigne">Comment le diriez-vous en mooré ?</p><p class="phrase-fr">${insec(p.fr)}</p></article>
+      ${e.ok ? `<div class="verdict ok" role="status"><div class="verdict-tete"><span class="rond">${ic("coche")}</span><div><b lang="mos">Barka !</b><span>Votre traduction rejoint la file de relecture.</span></div></div><p class="moore" lang="mos" style="font-size:18px;color:var(--titre)">${esc(e.texte)}</p></div>` : `
       <div class="zone-texte"><label for="trad">Votre traduction</label><textarea id="trad" lang="mos" spellcheck="false" autocomplete="off" placeholder="Écrivez comme vous parlez">${esc(e.texte)}</textarea>
         <div class="clavier-mo" role="group" aria-label="Lettres du mooré">${["ɛ", "ɩ", "ʋ", "ã", "ẽ", "ĩ", "õ", "ũ", "’"].map(c => `<button data-a="lettre-ins" data-v="${c}" aria-label="Insérer ${c}">${c}</button>`).join("")}</div>
-        <p class="petit muet">L'orthographe sera revue par un linguiste. Écrivez comme vous le diriez.</p></div>`}`,
+        <p class="petit muet">L’orthographe sera revue par un linguiste. Écrivez comme vous le diriez.</p></div>`}`,
       pied: e.ok ? `<button class="btn btn-1" data-a="ecr-suite">${e.fait >= 5 ? "Terminer" : "Phrase suivante"}</button>`
         : `<div class="rangee"><button class="btn btn-2" data-a="ecr-passer">Je ne sais pas</button><button class="btn btn-1" id="btn-trad" data-a="ecr-valider" ${e.texte.trim().length > 1 ? "" : "disabled"}>Valider</button></div>` };
   };
@@ -1389,42 +1406,42 @@ main:focus { outline: none; }
         <div class="txt">
           <p class="sur-titre clair">Archive vivante du mooré · Pagne 2026</p>
           <h1>Voici ce que notre génération <em>a laissé</em>.</h1>
-          <p class="chapo">Des voix de tous les âges et de toutes les régions, tissées ensemble pour celles et ceux qui viendront. Chaque fil est une phrase validée ; le fil d'or est le vôtre.</p>
-          <div class="chiffres-or"><div><b>${nb(3417)}</b><span>phrases dites</span></div><div><b>17</b><span>voix différentes</span></div><div><b>3,4 h</b><span>de mooré tissé</span></div></div>
-          <span class="exemple" style="color:var(--or-nuit)">Chiffres d'exemple</span>
+          <p class="chapo">Des voix de tous les âges et de toutes les régions, tissées ensemble pour celles et ceux qui viendront. Chaque fil est une phrase validée ; le fil d’or est le vôtre.</p>
+          <div class="chiffres-or"><div><b>${nb(3417)}</b><span>phrases dites</span></div><div><b>17</b><span>voix différentes</span></div><div><b>3,4 h</b><span>de mooré tissé</span></div></div>
+          <span class="exemple" style="color:var(--or-nuit)">Chiffres d’exemple</span>
         </div>
         <div class="toile"><canvas class="cv-pagne" data-sens="v" data-progres=".34" data-fil="1" data-anime="1" aria-hidden="true"></canvas></div>
       </section>
-      <div class="legende-pagne" style="color:var(--muet)"><span><i style="background:var(--or)"></i>Votre fil : ${nb(S.phrasesDites)} phrases</span><span><i style="background:repeating-linear-gradient(90deg,#7D3C98 0 3px,#1D0B3F 3px 6px)"></i>Les fils des autres</span><span><i style="background:var(--filet-2)"></i>Reste à tisser : 6,6 h</span></div>
+      <div class="legende-pagne" style="color:var(--muet)"><span><i style="background:var(--or)"></i>Votre fil : ${nb(S.phrasesDites)} phrases</span><span><i style="background:repeating-linear-gradient(90deg,#7D3C98 0 3px,#1D0B3F 3px 6px)"></i>Les fils des autres</span><span><i style="background:var(--filet-2)"></i>Reste à tisser : 6,6 h</span></div>
       <section class="carte" style="display:grid;gap:18px">
         <div class="tete-section" style="margin:0"><h2 class="t-2">Les objectifs de la génération</h2><span class="exemple">exemple</span></div>
         <div class="cibles">
-          ${cible("Heures de voix validées", "3,4 h", 34, 50, "Cible 10 h · minimum 5 h")}
+          ${cible("Heures de voix validées", "3,4 h", 34, 50, "Cible 10 h · minimum 5 h")}
           ${cible("Voix différentes", "17", 42, 50, "Cible 40 · minimum 20")}
-          ${cible("Voix de femmes", "31 %", 88, 71, "Cible 35 % · minimum 25 %")}
+          ${cible("Voix de femmes", "31 %", 88, 71, "Cible 35 % · minimum 25 %")}
         </div>
       </section>
       <section class="carte" style="display:grid;gap:14px">
-        <h2 class="t-2">Pour que l'archive ressemble à tout le monde</h2>
+        <h2 class="t-2">Pour que l’archive ressemble à tout le monde</h2>
         <p class="petit" style="color:var(--encre-2)">Les voix des aînés sont les plus rares. Ce sont elles que nos petits-enfants chercheront.</p>
-        <div class="ages" role="img" aria-label="Répartition par âge : 18 à 25 ans 41 %, 26 à 40 ans 33 %, 41 à 60 ans 19 %, plus de 60 ans 7 %">${[["18–25", 41], ["26–40", 33], ["41–60", 19], ["60 +", 7]].map(([a, v]) => `<div class="${v < 10 ? "peu" : ""}"><b>${v} %</b><i style="height:${Math.round(v * 2.2)}px"></i><span>${a} ans</span></div>`).join("")}</div>
+        <div class="ages" role="img" aria-label="Répartition par âge : 18 à 25 ans 41 %, 26 à 40 ans 33 %, 41 à 60 ans 19 %, plus de 60 ans 7 %">${[["18–25 ans", 41], ["26–40 ans", 33], ["41–60 ans", 19], ["60 ans et +", 7]].map(([a, v]) => `<div class="${v < 10 ? "peu" : ""}"><b>${v} %</b><i style="height:${Math.round(v * 2.2)}px"></i><span>${a}</span></div>`).join("")}</div>
       </section>
       <section class="carte" style="display:grid;gap:14px"><div class="tete-section" style="margin:0"><h2 class="t-2">Villes qui tissent</h2><span class="petit muet">phrases validées</span></div>${villes()}</section>`, rail: railHeritage() });
   const cible = (lib, val, pct, seuil, sous) => `<div class="cible"><div class="haut"><span>${lib}</span><b>${val}</b></div><div class="jauge" role="img" aria-label="${lib} : ${val}"><i style="width:${pct}%"></i><span class="seuil" style="left:${seuil}%"></span></div><small>${sous}</small></div>`;
   const railHeritage = () => `<div class="rail-int">
       <section class="capsule">
         <p class="sur-titre">${ic("sablier", "ic-mini")}Message pour 2076</p>
-        <h2>Dans cinquante ans, quelqu'un écoutera cette archive.</h2>
-        <p>Que voulez-vous lui dire, en mooré ? Un conseil, une chanson d'enfance, le nom de votre village.</p>
+        <h2>Dans cinquante ans, quelqu’un écoutera cette archive.</h2>
+        <p>Que voulez-vous lui dire, en mooré ? Un conseil, une chanson d’enfance, le nom de votre village.</p>
         ${S.capsuleFaite ? `<span class="badge vert">${ic("coche")}Votre message est gardé</span>` : `<button class="btn btn-1" data-a="aller" data-v="capsule">Laisser mon message</button>`}
       </section>
       <section class="carte" style="display:grid;gap:6px">
         <h2 class="t-2" style="margin-bottom:6px">Le registre</h2>
         <div class="registre">
-          <div><div><p>62 phrases validées à Kaya aujourd'hui.</p><p class="meta">il y a 12 min</p></div></div>
-          <div><div><p>Une nouvelle voix de Manga a rejoint l'archive.</p><p class="meta">il y a 40 min</p></div></div>
-          <div><div><p>« La saison des pluies commence bientôt. » a reçu sa dixième voix.</p><p class="meta">il y a 1 h</p></div></div>
-          <div><div><p>Ouahigouya a dépassé 450 phrases.</p><p class="meta">hier</p></div></div>
+          <div><div><p>62 phrases validées à Kaya aujourd’hui.</p><p class="meta">il y a 12 min</p></div></div>
+          <div><div><p>Une nouvelle voix de Manga a rejoint l’archive.</p><p class="meta">il y a 40 min</p></div></div>
+          <div><div><p>« La saison des pluies commence bientôt. » a reçu sa dixième voix.</p><p class="meta">il y a 1 h</p></div></div>
+          <div><div><p>Ouahigouya a dépassé 450 phrases.</p><p class="meta">hier</p></div></div>
         </div>
         <span class="exemple">exemple</span>
       </section>
@@ -1434,12 +1451,12 @@ main:focus { outline: none; }
   V.capsule = () => {
     const c = S.capsule, enreg = Micro.etat === "enreg";
     return { focus: true, tete: `<header class="focus-tete"><div><button class="ic-btn" data-a="aller" data-v="heritage" aria-label="Fermer">${ic("fermer")}</button><span class="sur-titre" style="text-align:center">Message pour 2076</span><span style="width:44px"></span></div></header>`, main: `
-      <div class="etape-titre" style="text-align:center;justify-items:center"><h1 class="titre-doux">Que voulez-vous laisser à celles et ceux qui viendront ?</h1><p class="chapo">En mooré, une minute au plus. Ce message est gardé à part : il n'entre pas dans le corpus d'entraînement.</p></div>
-      <div class="idees" style="justify-content:center">${["Un conseil de vie", "Une chanson d'enfance", "Le nom de votre village", "Ce qu'il ne faut pas oublier"].map(t => `<span class="badge or">${t}</span>`).join("")}</div>
-      <div class="tama"><canvas id="cv-tama" aria-hidden="true"></canvas><button class="micro${enreg ? " enreg" : ""}" data-a="micro" aria-label="${enreg ? "Arrêter l'enregistrement" : "Commencer l'enregistrement"}">${ic(enreg ? "stop" : "micro")}</button></div>
-      <p class="indic" aria-live="polite">${enreg ? `<span class="chrono" id="chrono">0,0 s</span><span>Prenez votre temps.</span>` : c.clip ? "<b>Message enregistré.</b> Réécoutez-le avant de le garder." : "Touchez le micro quand vous êtes prêt."}</p>
+      <div class="etape-titre" style="text-align:center;justify-items:center"><h1 class="titre-doux">Que voulez-vous laisser à celles et ceux qui viendront ?</h1><p class="chapo">En mooré, une minute au plus. Ce message est gardé à part : il n’entre pas dans le corpus d’entraînement.</p></div>
+      <div class="idees" style="justify-content:center">${["Un conseil de vie", "Une chanson d’enfance", "Le nom de votre village", "Ce qu’il ne faut pas oublier"].map(t => `<span class="badge or">${t}</span>`).join("")}</div>
+      <div class="tama"><canvas id="cv-tama" aria-hidden="true"></canvas><button class="micro${enreg ? " enreg" : ""}" data-a="micro" aria-label="${enreg ? "Arrêter l’enregistrement" : "Commencer l’enregistrement"}">${ic(enreg ? "stop" : "micro")}</button></div>
+      <p class="indic" aria-live="polite">${enreg ? `<span class="chrono" id="chrono">0,0 s</span><span>Prenez votre temps.</span>` : c.clip ? "<b>Message enregistré.</b> Réécoutez-le avant de le garder." : "Touchez le micro quand vous êtes prêt."}</p>
       ${c.clip && !enreg ? `<div class="clip"><button class="lire" data-a="ecoute-clip" data-v="capsule" aria-label="Écouter mon message">${ic(S.lecture === "clip-capsule" ? "pause" : "jouer")}</button><div class="milieu"><span class="txt">Votre message</span>${ondeHTML(c.clip.onde, "clip-capsule")}</div><div class="droite"><span class="meta">${sec(c.clip.d)}</span></div></div>
-      <label class="case"><input type="checkbox" id="case-capsule" data-a="capsule-accord" ${c.accord ? "checked" : ""}><span>Je confie ce message à l'archive de la génération. Je peux le retirer à tout moment.</span></label>` : ""}`,
+      <label class="case"><input type="checkbox" id="case-capsule" data-a="capsule-accord" ${c.accord ? "checked" : ""}><span>Je confie ce message à l’archive de la génération. Je peux le retirer à tout moment.</span></label>` : ""}`,
       pied: c.clip && !enreg ? `<div class="rangee"><button class="btn btn-2" data-a="capsule-refaire">${ic("refaire")}Refaire</button><button class="btn btn-1" data-a="capsule-garder" ${c.accord ? "" : "disabled"}>Garder</button></div>` : "" };
   };
 
@@ -1451,7 +1468,7 @@ main:focus { outline: none; }
         <span class="avatar" aria-hidden="true">${esc((S.prenom || "?").trim().charAt(0).toUpperCase() || "?")}</span>
         <div><h1 class="t-1" style="font-size:clamp(26px,6vw,34px)">${esc(S.prenom || "Mon profil")}</h1><p class="muet">${NIVEAUX[k][1]} · niveau ${k + 1} sur 5</p></div>
       </section>
-      <section class="carte niveau-carte"><div class="haut"><span class="t-3">Vers « ${NIVEAUX[k + 1] ? NIVEAUX[k + 1][1] : NIVEAUX[k][1]} »</span><span class="puce">${cauris()}${nb(S.cauris)}</span></div>${barreNiveau()}</section>
+      <section class="carte niveau-carte"><div class="haut"><span class="t-3">Vers <span class="insec">« ${NIVEAUX[k + 1] ? NIVEAUX[k + 1][1] : NIVEAUX[k][1]} »</span></span><span class="puce">${cauris()}${nb(S.cauris)}</span></div>${barreNiveau()}</section>
       <div class="stats">
         <div class="stat">${flamme()}<b>${S.feu}</b><span>jours de feu</span></div>
         <div class="stat">${ic("micro")}<b>${nb(S.phrasesDites)}</b><span>phrases dites</span></div>
@@ -1461,7 +1478,7 @@ main:focus { outline: none; }
       <div class="tete-section"><h2 class="t-2">Mes motifs</h2><span class="petit muet">${MOTIFS.filter(m => m.ok).length + (S.capsuleFaite ? 1 : 0)} sur ${MOTIFS.length}</span></div>
       <div class="motifs">${MOTIFS.map(m => { const ok = m.ok || (m.ic === "sablier" && S.capsuleFaite); return `<div class="motif${ok ? " gagne" : ""}"><span class="em">${m.ic === "flamme" ? ic("flamme") : ic(m.ic)}</span><b>${m.t}</b><span>${m.d}</span></div>`; }).join("")}</div>
       <div class="liste">
-        ${lienListe("gains", "portefeuille", "Mes gains", `${nb(1250)} FCFA à recevoir · vendredi`)}
+        ${lienListe("gains", "portefeuille", "Mes gains", `${nb(1250)} FCFA à recevoir · vendredi`)}
         ${lienListe("compte", "bouclier", "Compte et sécurité", "Code, appareils, retrait")}
         ${lienListe("consignes", "aide", "Réussir un enregistrement", "Exemples à écouter")}
         ${lienListe("legal", "document", "Textes et accord", "Conditions v1.0 acceptées")}
@@ -1475,7 +1492,7 @@ main:focus { outline: none; }
   };
   const lienListe = (v, icn, t, d) => `<button class="liste-lien" data-a="aller" data-v="${v}"><span class="pastille">${ic(icn)}</span><span><b>${t}</b><small>${d}</small></span>${ic("suivant")}</button>`;
   const railProfil = () => `<div class="rail-int">
-      <section class="solde"><p class="sur-titre clair">Solde à recevoir</p><div class="montant">${nb(1250)}<small>FCFA</small></div><span class="sous-ligne">Sur Orange Money · +226 ${S.tel.slice(0, 2)} •• •• ${S.tel.slice(-2)}</span></section>
+      <section class="solde"><p class="sur-titre clair">Solde à recevoir</p><div class="montant">${nb(1250)}<small>FCFA</small></div><span class="sous-ligne">Sur Orange Money · +226 ${S.tel.slice(0, 2)} •• •• ${S.tel.slice(-2)}</span></section>
       <section class="carte" style="display:grid;gap:14px"><div class="tete-section" style="margin:0"><h2 class="t-2">Votre semaine</h2>${puceFeu()}</div>${semaine()}</section>
       <button class="btn btn-3 seul-mobile" data-a="demo">${ic("grille")}Écrans de la maquette</button>
     </div>`;
@@ -1483,44 +1500,44 @@ main:focus { outline: none; }
   V.gains = () => ({ onglet: "profil", main: `
       <button class="retour-lien" data-a="aller" data-v="profil">${ic("retour")}Profil</button>
       <header class="tete-ecran"><p class="sur-titre">Mes gains</p><h1 class="t-1">Ce que votre voix a rapporté</h1></header>
-      <section class="solde"><p class="sur-titre clair">Solde à recevoir</p><div class="montant">${nb(1250)}<small>FCFA</small></div><span class="sous-ligne">Sur Orange Money · +226 ${S.tel.slice(0, 2)} •• •• ${S.tel.slice(-2)} · versement vendredi</span></section>
+      <section class="solde"><p class="sur-titre clair">Solde à recevoir</p><div class="montant">${nb(1250)}<small>FCFA</small></div><span class="sous-ligne">Sur Orange Money · +226 ${S.tel.slice(0, 2)} •• •• ${S.tel.slice(-2)}</span><span class="sous-ligne">Versement vendredi</span></section>
       <div class="liste">
-        <div><span>Minutes validées<small>Par d'autres contributeurs ou l'équipe</small></span><span class="chiffre">12 min 30 s</span></div>
-        <div><span>En cours d'écoute<small>Pas encore comptées</small></span><span class="chiffre">3 min 10 s</span></div>
-        <div><span>Écoutes validées<small>5 FCFA l'écoute</small></span><span class="chiffre">40</span></div>
+        <div><span>Minutes validées<small>Par d’autres contributeurs ou l’équipe</small></span><span class="chiffre">12 min 30 s</span></div>
+        <div><span>En cours d’écoute<small>Pas encore comptées</small></span><span class="chiffre">3 min 10 s</span></div>
+        <div><span>Écoutes validées<small>5 FCFA l’écoute</small></span><span class="chiffre">40</span></div>
       </div>
       <div class="tete-section"><h2 class="t-2">Derniers mouvements</h2></div>
       <div class="liste">
-        <div><span>Lot n° 14 validé<small>Aujourd'hui · 2 min 05 s</small></span><span class="chiffre plus">+208</span></div>
+        <div><span>Lot n° 14 validé<small>Aujourd’hui · 2 min 05 s</small></span><span class="chiffre plus">+208</span></div>
         <div><span>Versement Orange Money<small>Vendredi dernier · <span class="meta">réf. PP251003.1544.C12345</span></small></span><span class="chiffre">−2 400</span></div>
-        <div><span>Lot n° 12 validé<small>Mercredi · 1 min 50 s</small></span><span class="chiffre plus">+183</span></div>
+        <div><span>Lot n° 12 validé<small>Mercredi · 1 min 50 s</small></span><span class="chiffre plus">+183</span></div>
       </div>
-      <p class="exemple">Montants, tarifs et références d'exemple</p>` });
+      <p class="exemple">Montants, tarifs et références d’exemple</p>` });
 
   V.compte = () => ({ onglet: "profil", main: `
       <button class="retour-lien" data-a="aller" data-v="profil">${ic("retour")}Profil</button>
       <header class="tete-ecran"><p class="sur-titre">Compte et sécurité</p><h1 class="t-1">Votre compte est protégé</h1></header>
       <div class="liste">
-        <div><span>Numéro<small>Visible par vous seul, jamais à côté de votre voix</small></span><span class="chiffre">+226 ${S.tel.slice(0, 2)} •• •• ${S.tel.slice(-2)}</span></div>
-        <div><span>Code PIN<small>5 essais faux bloquent le compte 15 minutes</small></span><button class="lien" data-a="pin-change">Changer</button></div>
+        <div><span>Numéro<small>Visible par vous seul, jamais à côté de votre voix</small></span><span class="chiffre">+226 ${S.tel.slice(0, 2)} •• •• ${S.tel.slice(-2)}</span></div>
+        <div><span>Code PIN<small>5 essais faux bloquent le compte 15 minutes</small></span><button class="lien" data-a="pin-change">Changer</button></div>
       </div>
       <div class="tete-section"><h2 class="t-2">Appareils connectés</h2></div>
       <div class="liste">
-        <div><span>Ce téléphone<small>Android · connecté depuis 3 jours</small></span><span class="badge vert">Actif</span></div>
-        <div><span>Autre téléphone<small>Android · il y a 12 jours</small></span><button class="lien" data-a="toast" data-v="Appareil déconnecté">Déconnecter</button></div>
+        <div><span>Ce téléphone<small>Android · connecté depuis 3 jours</small></span><span class="badge vert">Actif</span></div>
+        <div><span>Autre téléphone<small>Android · il y a 12 jours</small></span><button class="lien" data-a="toast" data-v="Appareil déconnecté">Déconnecter</button></div>
       </div>
-      <button class="btn btn-2" data-a="toast" data-v="Déconnecté de tous les autres appareils">${ic("sortir")}Me déconnecter de tous les appareils</button>
+      <button class="btn btn-2" data-a="toast" data-v="Déconnecté de tous les autres appareils">${ic("sortir")}Déconnecter les autres appareils</button>
       <div class="tete-section"><h2 class="t-2">Ma participation</h2></div>
       <div class="liste">
         <div><span>Accord de contribution<small>Conditions v1.0 acceptées</small></span><button class="lien" data-a="legal" data-v="conditions">Relire</button></div>
         <div><span>Profil de voix<small>Modifiable à tout moment</small></span><button class="lien" data-a="aller" data-v="voix">Modifier</button></div>
       </div>
-      ${S.retrait ? `<div class="encart" role="alert" style="background:var(--terre-tint)">${ic("info")}<div style="display:grid;gap:12px"><p><b>Confirmer le retrait ?</b> Vos enregistrements sortiront des prochaines versions du corpus. Les gains déjà validés vous restent dus.</p><div class="rangee"><button class="btn btn-2 btn-court" data-a="retrait-annule">Annuler</button><button class="btn btn-terre btn-court" data-a="retrait-ok">Je retire</button></div></div></div>`
+      ${S.retrait ? `<div class="encart" role="alert" style="background:var(--terre-tint)">${ic("info")}<div style="display:grid;gap:12px"><p><b>Confirmer le retrait ?</b> Vos enregistrements sortiront des prochaines versions du corpus. Les gains déjà validés vous restent dus.</p><div class="rangee"><button class="btn btn-2 btn-court" data-a="retrait-annule">Annuler</button><button class="btn btn-terre btn-court" data-a="retrait-ok">Je retire</button></div></div></div>`
         : `<button class="btn btn-non" data-a="retrait">Retirer ma participation</button>`}` });
 
   V.consignes = () => ({ onglet: "profil", main: `
       <button class="retour-lien" data-a="aller" data-v="${S.retourConsignes || "profil"}">${ic("retour")}Retour</button>
-      <header class="tete-ecran"><p class="sur-titre">Consignes</p><h1 class="t-1">Un bon enregistrement</h1><p class="chapo">Ce qui fait une phrase utile à l'archive. Chaque point s'écoute, avec un exemple à éviter.</p></header>
+      <header class="tete-ecran"><p class="sur-titre">Consignes</p><h1 class="t-1">Un bon enregistrement</h1><p class="chapo">Ce qui fait une phrase utile à l’archive. Chaque point s’écoute, avec un exemple à éviter.</p></header>
       <div class="points-accord">${CONSIGNES.map(([t, d], k) => `<article class="point"><h3><span class="num">${k + 1}</span>${t}</h3><p>${d}</p><div class="rangee" style="flex-wrap:wrap;justify-content:flex-start">${btnEcoute("c" + k, "Bon exemple")}${btnEcoute("cx" + k, "À éviter")}</div></article>`).join("")}</div>
       <p class="exemple">Exemples audio à enregistrer par un locuteur</p>` });
 
@@ -1542,8 +1559,8 @@ main:focus { outline: none; }
     if (f.type === "demo") {
       const g = (t, ids) => `<div class="groupe-ecrans"><p class="sur-titre">${t}</p><div class="choix">${ids.map(([id, lib]) => `<button class="puce-choix" data-a="demo-aller" data-v="${id}" aria-pressed="${S.ecran === id}">${lib}</button>`).join("")}</div></div>`;
       c = `<div class="feuille-tete"><h2 class="t-2" id="feuille-t">Écrans de la maquette</h2><button class="ic-btn" data-a="fermer-feuille" aria-label="Fermer">${ic("fermer")}</button></div>
-        <p class="petit" style="color:var(--encre-2)">Maquette cliquable. Le micro est réel si le navigateur l'autorise, sinon simulé. Voix de référence, chiffres et tarifs sont des exemples ; les mots mooré sont à valider par un locuteur.</p>
-        ${g("Arrivée", [["bienvenue", "Bienvenue"], ["objectif", "Objectif"], ["niveau", "Niveau"], ["voix", "Profil de voix"], ["accord", "Accord"], ["numero", "Numéro"], ["pin", "Code PIN"], ["pret", "Bienvenue dans l'archive"]])}
+        <p class="petit" style="color:var(--encre-2)">Maquette cliquable. Le micro est réel si le navigateur l’autorise, sinon simulé. Voix de référence, chiffres et tarifs sont des exemples ; les mots mooré sont à valider par un locuteur.</p>
+        ${g("Arrivée", [["bienvenue", "Bienvenue"], ["objectif", "Objectif"], ["niveau", "Niveau"], ["voix", "Profil de voix"], ["accord", "Accord"], ["numero", "Numéro"], ["pin", "Code PIN"], ["pret", "Bienvenue dans l’archive"]])}
         ${g("Au quotidien", [["accueil", "Accueil"], ["apprendre", "Apprendre"], ["lecon", "Leçon"], ["contribuer", "Contribuer"], ["parler", "Parler"], ["lire", "Lire"], ["revue", "Revue du lot"], ["envoye", "Lot envoyé"], ["ecouter", "Écouter"], ["ecrire", "Écrire"]])}
         ${g("Héritage et compte", [["heritage", "Héritage"], ["capsule", "Message pour 2076"], ["profil", "Profil"], ["gains", "Gains"], ["compte", "Compte et sécurité"], ["consignes", "Consignes"], ["legal", "Textes légaux"]])}
         <div class="bascule"><span>Simuler une coupure réseau</span><button class="interrupteur" role="switch" aria-checked="${S.horsLigne}" aria-label="Simuler une coupure réseau" data-a="reseau"></button></div>
@@ -1554,10 +1571,10 @@ main:focus { outline: none; }
       c = `<div class="feuille-tete"><p class="sur-titre" id="feuille-t">Lettre du mooré</p><button class="ic-btn" data-a="fermer-feuille" aria-label="Fermer">${ic("fermer")}</button></div>
         <div class="lettre-grande" lang="mos">${x.l}</div>
         <p style="text-align:center;font-size:17px">${x.son}</p>
-        ${x.ex ? `<div class="carte" style="display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:inset 0 0 0 1px var(--filet)"><div><span class="moore" lang="mos" style="font-size:26px;font-weight:700;color:var(--titre)">${x.ex[0]}</span><p class="muet petit">${x.ex[1]}</p></div>${btnEcoute("lettre-" + f.i, "Écouter", true)}</div>` : `<p class="petit muet" style="text-align:center">Mot d'exemple à fournir par la voix de référence.</p>`}
+        ${x.ex ? `<div class="carte" style="display:flex;align-items:center;justify-content:space-between;gap:12px;box-shadow:inset 0 0 0 1px var(--filet)"><div><span class="moore" lang="mos" style="font-size:26px;font-weight:700;color:var(--titre)">${x.ex[0]}</span><p class="muet petit">${x.ex[1]}</p></div>${btnEcoute("lettre-" + f.i, "Écouter", true)}</div>` : `<p class="petit muet" style="text-align:center">Mot d’exemple à fournir par la voix de référence.</p>`}
         <div class="rangee"><button class="btn btn-2" data-a="lettre" data-i="${(f.i + LETTRES.length - 1) % LETTRES.length}">${ic("retour")}Précédente</button><button class="btn btn-1" data-a="lettre" data-i="${(f.i + 1) % LETTRES.length}">Suivante${ic("suivant")}</button></div>`;
     } else if (f.type === "niveau") {
-      c = `<div class="fete" style="padding-top:4px"><div class="sceau" aria-hidden="true">${ic("etincelle")}</div><p class="sur-titre">Nouveau niveau</p><h1 id="feuille-t">${NIVEAUX[niveauDe(S.cauris)][1]}</h1><p class="chapo">Votre voix porte plus loin. Merci de la prêter à l'archive.</p></div><button class="btn btn-1" data-a="fermer-feuille">Continuer</button>`;
+      c = `<div class="fete" style="padding-top:4px"><div class="sceau" aria-hidden="true">${ic("etincelle")}</div><p class="sur-titre">Nouveau niveau</p><h1 id="feuille-t">${NIVEAUX[niveauDe(S.cauris)][1]}</h1><p class="chapo">Votre voix porte plus loin. Merci de la prêter à l’archive.</p></div><button class="btn btn-1" data-a="fermer-feuille">Continuer</button>`;
     }
     return `<div class="voile" data-a="fermer-feuille"></div><div class="feuille${S.feuilleNeuve ? " ouvre" : ""}" role="dialog" aria-modal="true" aria-labelledby="feuille-t"><span class="poignee" aria-hidden="true"></span>${c}</div>`;
   }
@@ -1714,7 +1731,7 @@ main:focus { outline: none; }
   };
   let premiereEcouteSimulee = true;
   function ecouterSimule(id, d, fin) {
-    if (premiereEcouteSimulee && Lecteur.id !== id) { premiereEcouteSimulee = false; setTimeout(() => toast("Maquette : les voix de référence sont simulées"), 300); }
+    if (premiereEcouteSimulee && Lecteur.id !== id) { premiereEcouteSimulee = false; setTimeout(() => toast("Maquette : les voix de référence sont simulées"), 300); }
     Lecteur.jouer(id, { d }, fin);
   }
 
@@ -1785,7 +1802,11 @@ main:focus { outline: none; }
       const r = cv.getBoundingClientRect(); if (!r.width || !r.height) return;
       const dpr = Math.min(devicePixelRatio || 1, 2); cv.width = Math.round(r.width * dpr); cv.height = Math.round(r.height * dpr);
       const g = cv.getContext("2d");
-      const horiz = cv.dataset.sens === "h", u = +(cv.dataset.u || 4), progres = +(cv.dataset.progres || .34), fil = cv.dataset.fil === "1";
+      const horiz = cv.dataset.sens === "h", u = +(cv.dataset.u || 4), fil = cv.dataset.fil === "1";
+      let progres = +(cv.dataset.progres || .34);
+      // sur l'écran d'accueil, le bord de tissage (et sa navette) s'arrête au-dessus du proverbe
+      const bq = cv.closest(".onb-art") && cv.closest(".onb-art").querySelector(".onb-proverbe");
+      if (bq && !horiz) progres = Math.max(.2, Math.min(progres, Math.floor((bq.getBoundingClientRect().top - r.top - 44) / r.height * 100) / 100));
       const W = horiz ? r.height : r.width, H = horiz ? r.width : r.height;
       const st = pagneStatique(W, H, u, progres, fil);
       const dessiner = (t) => {
@@ -1968,7 +1989,7 @@ main:focus { outline: none; }
       rendre({ entree: true }); window.scrollTo(0, 0);
     },
     lettre(el) { S.feuilleNeuve = !S.feuille || S.feuille.type !== "lettre"; S.feuille = { type: "lettre", i: +el.dataset.i }; Lecteur.arreter(true); rendre(); },
-    verrou() { toast("Terminez « Se saluer » pour ouvrir cette leçon."); vibre([10, 30, 10]); },
+    verrou() { toast("Terminez « Se saluer » pour ouvrir cette leçon."); vibre([10, 30, 10]); },
     "capsule-accord"(el) { S.capsule.accord = el.checked; rendre(); },
     "capsule-refaire"() { S.capsule.clip = null; S.capsule.accord = false; rendre(); },
     "capsule-garder"(el) { S.capsuleFaite = true; sauver(); gagner(20, el); aller("heritage"); setTimeout(() => { toast("Votre message est gardé pour 2076"); Son.fete(); confettis(); }, 300); },
@@ -2032,7 +2053,7 @@ main:focus { outline: none; }
     if (el.id === "tel") {
       const ch = el.value.replace(/\D/g, "").slice(0, 8);
       S.tel = ch.replace(/(\d{2})(?=\d)/g, "$1 "); el.value = S.tel;
-      const err = $("#tel-err"); if (err) err.textContent = telOk() ? "" : "Il manque des chiffres : un numéro du Burkina en compte 8.";
+      const err = $("#tel-err"); if (err) err.textContent = telOk() ? "" : "Il manque des chiffres : un numéro du Burkina en compte 8.";
       const b = $("#btn-tel"); if (b) b.disabled = !telOk();
     } else if (el.id === "prenom") { S.prenom = el.value.slice(0, 30); sauver(); }
     else if (el.id === "trad") { S.ecr.texte = el.value.normalize("NFC"); const b = $("#btn-trad"); if (b) b.disabled = S.ecr.texte.trim().length < 2; }
