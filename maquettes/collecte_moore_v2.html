@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#110A22" media="(prefers-color-scheme: dark)">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..600&family=Playfair+Display:ital,wght@0,600;1,500..700&family=Space+Mono&family=Syne:wght@700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Elms+Sans:wght@300..700&family=Fira+Sans+Extra+Condensed:wght@700&display=swap">
 <style>
 /* Mise en page « la cour » : navigation à gauche, fil du jour au centre, pagne collectif à droite.
    Sous 1240 px le pagne rejoint le fil ; sous 860 px, une colonne et une barre d'onglets en verre.
@@ -29,11 +29,12 @@
   --ombre-1: 0 1px 2px rgba(29, 11, 63, .05), 0 4px 14px -6px rgba(29, 11, 63, .10);
   --ombre-2: 0 2px 6px rgba(29, 11, 63, .05), 0 18px 40px -18px rgba(29, 11, 63, .28);
   --ombre-3: 0 30px 80px -24px rgba(29, 11, 63, .45);
-  --f-titre: "Syne", "DM Sans", system-ui, sans-serif;
-  --f-texte: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --f-recit: "Playfair Display", Georgia, "Times New Roman", serif;
-  --f-moore: "Andika", "DM Sans", "Noto Sans", system-ui, sans-serif;
-  --f-mono: "Space Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  /* Deux voix : la condensée de la marque pour les titres et les chiffres, une ronde douce pour tout le reste.
+     Fira Sans Extra Condensed (Carrois, pensée pour les petits écrans) et Elms Sans (Amarachi Nwauwa, Abuja)
+     couvrent toutes deux ɛ ɩ ʋ ã ẽ ĩ õ ũ : le mooré ne change jamais de police. */
+  --f-titre: "Fira Sans Extra Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --f-texte: "Elms Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --f-moore: "Elms Sans", "Noto Sans", system-ui, sans-serif;
   --r-sm: 8px; --r-md: 14px; --r-lg: 20px;
   --doux: cubic-bezier(.22, 1, .36, 1); --ressort: cubic-bezier(.34, 1.45, .64, 1);
   color-scheme: light;
@@ -76,8 +77,8 @@
 /* ---------- Socle ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
-body { margin: 0; min-height: 100vh; min-height: 100dvh; background: var(--papier); color: var(--encre); font: 400 16px/1.55 var(--f-texte); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overflow-x: clip; }
-button, input, textarea { font: inherit; color: inherit; }
+body { margin: 0; min-height: 100vh; min-height: 100dvh; background: var(--papier); color: var(--encre); font: 400 16.5px/1.55 var(--f-texte); word-spacing: -.15em; font-synthesis: none; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overflow-x: clip; }
+button, input, textarea { font: inherit; color: inherit; word-spacing: inherit; letter-spacing: inherit; }
 button { cursor: pointer; -webkit-tap-highlight-color: transparent; }
 svg, canvas { display: block; max-width: 100%; }
 h1, h2, h3, h4, p { margin: 0; }
@@ -94,18 +95,18 @@ main:focus { outline: none; }
 .ic-mini { display: inline-block; width: 16px; height: 16px; vertical-align: -3px; margin-right: 6px; }
 
 /* ---------- Typographie ---------- */
-.sur-titre { font: 600 12.5px/1.3 var(--f-texte); letter-spacing: .09em; text-transform: uppercase; color: var(--muet); }
+.sur-titre { font: 700 14.5px/1.2 var(--f-titre); letter-spacing: .07em; word-spacing: 0; text-transform: uppercase; color: var(--muet); }
 .sur-titre.clair { color: var(--sur-nuit-2); }
-.t-1 { font: 700 clamp(28px, 6.4vw, 38px)/1.08 var(--f-titre); letter-spacing: -.015em; color: var(--titre); text-wrap: balance; }
-.t-2 { font: 700 20px/1.2 var(--f-titre); letter-spacing: -.01em; color: var(--titre); text-wrap: balance; }
+.t-1 { font: 700 clamp(32px, 7.8vw, 44px)/1.03 var(--f-titre); letter-spacing: 0; word-spacing: 0; color: var(--titre); text-wrap: balance; }
+.t-2 { font: 700 25px/1.08 var(--f-titre); letter-spacing: 0; word-spacing: 0; color: var(--titre); text-wrap: balance; }
 .t-3 { font: 600 17px/1.3 var(--f-texte); color: var(--encre); }
-.recit { font-family: var(--f-recit); font-style: italic; font-weight: 600; letter-spacing: -.01em; }
+.titre-doux { font: 700 clamp(32px, 7.8vw, 44px)/1.05 var(--f-titre); color: var(--titre); text-wrap: balance; word-spacing: 0; }
 .chapo { color: var(--encre-2); font-size: 16.5px; max-width: 60ch; }
 .petit { font-size: 14px; }
 .muet { color: var(--muet); }
 .moore { font-family: var(--f-moore); }
-.meta { font: 400 12.5px/1.3 var(--f-mono); color: var(--muet); letter-spacing: .01em; }
-.exemple { font: 400 11.5px/1.3 var(--f-mono); color: var(--or-texte); letter-spacing: .02em; }
+.meta { font: 500 13px/1.3 var(--f-texte); color: var(--muet); letter-spacing: .01em; font-variant-numeric: tabular-nums; }
+.exemple { font: 600 12px/1.3 var(--f-texte); color: var(--or-texte); letter-spacing: .02em; }
 .lien { all: unset; cursor: pointer; color: var(--titre); font-weight: 600; text-decoration: underline; text-decoration-color: var(--or); text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
 .lien:focus-visible { outline: 2px solid var(--or); outline-offset: 3px; border-radius: 4px; }
 
@@ -122,14 +123,14 @@ main:focus { outline: none; }
 .embleme.clair .e-cerveau, .embleme.clair .e-noeud { fill: var(--nuit); stroke: var(--sur-nuit); }
 .embleme.clair .e-circuit { stroke: var(--sur-nuit); }
 .embleme.clair .e-noeud.or { stroke: var(--or-nuit); }
-.mot-marque { font: 800 15px/1 var(--f-titre); letter-spacing: .04em; color: var(--titre); white-space: nowrap; }
+.mot-marque { font: 700 13.5px/1 var(--f-texte); letter-spacing: .16em; word-spacing: 0; color: var(--titre); white-space: nowrap; }
 .mot-marque .pt { color: var(--or); margin-inline: 1px; }
 .mot-marque .ai { color: var(--or-texte); }
 .mot-marque.clair { color: var(--sur-nuit); }
 .mot-marque.clair .ai, .mot-marque.clair .pt { color: var(--or-nuit); }
 
 /* ---------- Boutons ---------- */
-.btn { appearance: none; border: 0; display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 54px; padding: 0 22px; border-radius: var(--r-md); font: 600 16.5px/1.15 var(--f-texte); text-align: center; width: 100%; transition: transform .2s var(--ressort), background-color .2s, box-shadow .2s, opacity .2s, color .2s; }
+.btn { appearance: none; border: 0; display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 54px; padding: 0 22px; border-radius: var(--r-md); font: 600 17px/1.15 var(--f-texte); text-align: center; width: 100%; transition: transform .2s var(--ressort), background-color .2s, box-shadow .2s, opacity .2s, color .2s; }
 .btn:active:not([disabled]) { transform: scale(.97); }
 .btn[disabled] { opacity: .42; cursor: not-allowed; box-shadow: none; }
 .btn .ic { width: 22px; height: 22px; }
@@ -159,7 +160,7 @@ main:focus { outline: none; }
 .cauris .c2 { fill: none; stroke: var(--or-texte); stroke-width: 1.3; stroke-linecap: round; }
 .puce.bat { animation: bat .5s var(--ressort); }
 @keyframes bat { 40% { transform: scale(1.12); } }
-.gain-vol { position: fixed; z-index: 90; pointer-events: none; font: 800 18px/1 var(--f-titre); color: var(--or-texte); background: var(--or-tint); padding: 6px 10px; border-radius: 999px; box-shadow: var(--ombre-2); white-space: nowrap; }
+.gain-vol { position: fixed; z-index: 90; pointer-events: none; font: 700 21px/1 var(--f-titre); color: var(--or-texte); background: var(--or-tint); padding: 6px 10px; border-radius: 999px; box-shadow: var(--ombre-2); white-space: nowrap; }
 
 /* Bande Faso Dan Fani : chaque étape réussie tisse un segment */
 .trame { display: grid; grid-template-columns: repeat(var(--n, 5), minmax(0, 1fr)); gap: 4px; }
@@ -201,7 +202,7 @@ main:focus { outline: none; }
 
 .nav-cote { flex-direction: column; gap: 4px; padding: 26px 14px 18px; border-right: 1px solid var(--filet); position: sticky; top: 0; height: 100vh; height: 100dvh; overflow-y: auto; view-transition-name: navcote; }
 .nav-marque { all: unset; cursor: pointer; display: flex; align-items: center; gap: 9px; padding: 4px 6px; }
-.nav-marque .mot-marque { font-size: 14px; letter-spacing: .03em; }
+.nav-marque .mot-marque { font-size: 12.5px; letter-spacing: .14em; }
 .nav-marque:focus-visible { outline: 2px solid var(--or); outline-offset: 2px; border-radius: 8px; }
 .nav-sous { margin: 4px 10px 22px; font-size: 13px; color: var(--muet); }
 .nav-lien { appearance: none; border: 0; background: none; width: 100%; display: flex; align-items: center; gap: 13px; padding: 12px 14px; border-radius: var(--r-md); color: var(--encre-2); font: 600 15.5px/1 var(--f-texte); text-align: left; transition: background-color .2s, color .2s; }
@@ -250,22 +251,22 @@ main:focus { outline: none; }
 .retour-lien:hover { background: var(--griot-tint); }
 
 .salut { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 16px; padding-top: 4px; }
-.t-salut { font: 600 clamp(28px, 7vw, 40px)/1.08 var(--f-recit); letter-spacing: -.01em; color: var(--titre); margin-top: 6px; text-wrap: balance; }
-.t-salut .moore { font-family: var(--f-recit); font-style: italic; }
+.t-salut { font: 350 clamp(30px, 7.6vw, 42px)/1.1 var(--f-texte); letter-spacing: -.01em; word-spacing: -.12em; color: var(--titre); margin-top: 6px; text-wrap: balance; }
+.t-salut .moore { font-weight: 650; }
 .salut-sous { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin-top: 8px; color: var(--muet); font-size: 14.5px; }
 
 .anneau { position: relative; width: 76px; height: 76px; flex: none; }
 .anneau svg { width: 100%; height: 100%; transform: rotate(-90deg); }
 .anneau .fond { fill: none; stroke: var(--filet); stroke-width: 7; }
 .anneau .val { fill: none; stroke: var(--or); stroke-width: 7; stroke-linecap: round; transition: stroke-dasharray .8s var(--doux); }
-.anneau b { position: absolute; inset: 0; display: grid; place-items: center; font: 700 17px/1 var(--f-titre); color: var(--titre); }
+.anneau b { position: absolute; inset: 0; display: grid; place-items: center; font: 700 21px/1 var(--f-titre); color: var(--titre); }
 .anneau b small { display: block; font: 600 10.5px/1 var(--f-texte); color: var(--muet); margin-top: 2px; text-align: center; }
 
 /* Mission : panneau de nuit, losanges d'or de la charte en lisière */
 .mission { position: relative; overflow: hidden; border-radius: var(--r-lg); background: radial-gradient(120% 140% at 0% 0%, var(--nuit-2) 0%, var(--nuit) 58%); color: var(--sur-nuit); padding: 22px 20px 20px; box-shadow: var(--ombre-2); isolation: isolate; }
 .mission::before { content: ""; position: absolute; z-index: -1; top: -30px; right: -70px; width: 260px; height: 260px; opacity: .2; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='52' height='52' viewBox='0 0 52 52'%3E%3Cg fill='none' stroke='%23DDB63F' stroke-width='2.4'%3E%3Cpath d='M26 3 49 26 26 49 3 26Z'/%3E%3Cpath d='M26 13 39 26 26 39 13 26Z'/%3E%3C/g%3E%3C/svg%3E"); background-size: 52px 52px; -webkit-mask-image: radial-gradient(closest-side, #000 30%, transparent); mask-image: radial-gradient(closest-side, #000 30%, transparent); }
 .mission-corps { display: grid; gap: 12px; max-width: 460px; }
-.mission-t { font: 700 clamp(22px, 5.4vw, 27px)/1.15 var(--f-titre); letter-spacing: -.01em; text-wrap: balance; }
+.mission-t { font: 700 clamp(28px, 7vw, 34px)/1.04 var(--f-titre); letter-spacing: 0; word-spacing: 0; text-wrap: balance; }
 .mission-meta { display: flex; flex-wrap: wrap; gap: 6px 16px; color: var(--sur-nuit-2); font-size: 14px; }
 .mission-meta span { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
 .mission-meta svg { width: 18px; height: 18px; }
@@ -297,8 +298,8 @@ main:focus { outline: none; }
 
 .mot-jour { display: grid; gap: 6px; }
 .mot-ligne { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 4px; }
-.mot-mo { font: 700 clamp(34px, 9vw, 44px)/1.05 var(--f-moore); color: var(--titre); letter-spacing: -.01em; }
-.mot-fr { font: italic 500 19px/1.3 var(--f-recit); color: var(--encre); }
+.mot-mo { font: 700 clamp(36px, 9.4vw, 46px)/1.05 var(--f-moore); color: var(--titre); letter-spacing: -.01em; }
+.mot-fr { font: 500 19px/1.3 var(--f-texte); color: var(--encre); }
 
 .ecoute { appearance: none; border: 0; display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 14px 0 6px; border-radius: 999px; background: var(--or-tint); color: var(--or-texte); font: 600 14px/1 var(--f-texte); white-space: nowrap; transition: transform .2s var(--ressort); }
 .ecoute .rond { width: 30px; height: 30px; border-radius: 50%; background: var(--or); color: var(--sur-or); display: grid; place-items: center; }
@@ -357,7 +358,7 @@ main:focus { outline: none; }
 .unite.faite { background: var(--or-tint); }
 .unite.verrou { background: var(--papier-2); color: var(--muet); }
 .unite.verrou h2 { color: var(--encre-2); }
-.unite h2 { font: 700 19px/1.2 var(--f-titre); margin-top: 3px; }
+.unite h2 { font: 700 25px/1.05 var(--f-titre); margin-top: 3px; word-spacing: 0; }
 .unite p.d { font-size: 14px; margin-top: 2px; opacity: .85; }
 .chemin { position: relative; display: grid; gap: 26px; padding: 18px 0 8px; }
 .chemin svg.trace { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
@@ -400,8 +401,8 @@ main:focus { outline: none; }
 .invite { background: var(--carte); border-radius: var(--r-lg); padding: 22px 20px 20px; box-shadow: var(--ombre-2); display: grid; gap: 12px; }
 .invite .consigne { font-size: 15px; color: var(--encre-2); }
 .phrase-fr { font: 600 clamp(22px, 5.6vw, 28px)/1.3 var(--f-texte); color: var(--encre); text-wrap: balance; letter-spacing: -.005em; }
-.phrase-mo { font: 700 clamp(26px, 7vw, 36px)/1.25 var(--f-moore); color: var(--titre); text-wrap: balance; }
-.invite .sens { font: italic 500 17px/1.4 var(--f-recit); color: var(--encre-2); }
+.phrase-mo { font: 600 clamp(26px, 7vw, 34px)/1.25 var(--f-moore); word-spacing: -.15em; color: var(--titre); text-wrap: balance; }
+.invite .sens { font: 400 17px/1.4 var(--f-texte); color: var(--encre-2); }
 .invite .note { display: flex; gap: 8px; align-items: flex-start; font-size: 14px; color: var(--muet); border-top: 1px dashed var(--filet-2); padding-top: 12px; }
 .invite .note .ic { width: 18px; height: 18px; margin-top: 2px; }
 
@@ -414,10 +415,10 @@ main:focus { outline: none; }
 .micro[disabled] { background: var(--papier-2); color: var(--muet); box-shadow: 0 0 0 8px var(--papier), 0 0 0 9.5px var(--filet); cursor: not-allowed; }
 .indic { text-align: center; font-size: 15px; color: var(--encre-2); min-height: 48px; display: grid; align-content: center; gap: 2px; }
 .indic b { color: var(--encre); }
-.indic .chrono { font: 700 14px/1 var(--f-mono); color: var(--terre); letter-spacing: .04em; }
+.indic .chrono { font: 700 20px/1 var(--f-titre); color: var(--terre); letter-spacing: .02em; font-variant-numeric: tabular-nums; }
 .indic .moore { font-weight: 700; color: var(--titre); }
 .astuce { text-align: center; font-size: 13px; color: var(--muet); }
-.astuce kbd { font: 700 11.5px/1 var(--f-mono); padding: 3px 6px; border-radius: 5px; box-shadow: inset 0 0 0 1px var(--filet-2), 0 1px 0 var(--filet-2); background: var(--carte); color: var(--encre-2); }
+.astuce kbd { font: 700 12px/1 var(--f-texte); padding: 3px 6px; border-radius: 5px; box-shadow: inset 0 0 0 1px var(--filet-2), 0 1px 0 var(--filet-2); background: var(--carte); color: var(--encre-2); }
 @media (hover: none) { .astuce { display: none; } }
 
 .clip { display: grid; grid-template-columns: 48px minmax(0, 1fr) auto; align-items: center; gap: 12px; background: var(--carte); border-radius: var(--r-md); padding: 10px 10px 10px 10px; box-shadow: var(--ombre-1); }
@@ -442,7 +443,7 @@ main:focus { outline: none; }
 
 .resume { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
 .resume > div { background: var(--carte); border-radius: var(--r-md); padding: 14px 12px; box-shadow: var(--ombre-1); display: grid; gap: 4px; }
-.resume b { font: 700 21px/1 var(--f-titre); color: var(--titre); font-variant-numeric: tabular-nums; }
+.resume b { font: 700 27px/1 var(--f-titre); color: var(--titre); font-variant-numeric: tabular-nums; }
 .resume span { font-size: 12.5px; color: var(--muet); line-height: 1.3; }
 
 /* Fête de fin de lot */
@@ -451,9 +452,9 @@ main:focus { outline: none; }
 .fete .sceau::before { content: ""; position: absolute; inset: 16px; border-radius: 26px; transform: rotate(45deg); background: linear-gradient(135deg, var(--or-vif), var(--or)); box-shadow: 0 0 0 10px var(--or-tint), 0 20px 40px -16px var(--or); animation: sceau .9s var(--ressort) both; }
 .fete .sceau .ic { position: relative; width: 44px; height: 44px; color: var(--sur-or); stroke-width: 2.4; animation: entree .6s .25s var(--doux) both; }
 @keyframes sceau { from { transform: rotate(-45deg) scale(.4); opacity: 0; } }
-.fete h1 { font: italic 600 clamp(30px, 7.6vw, 44px)/1.1 var(--f-recit); color: var(--titre); text-wrap: balance; }
+.fete h1 { font: 700 clamp(36px, 9vw, 52px)/1.02 var(--f-titre); word-spacing: 0; color: var(--titre); text-wrap: balance; }
 .fete .chapo { margin-inline: auto; }
-.compteur { font: 700 clamp(34px, 9vw, 46px)/1 var(--f-titre); color: var(--titre); font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
+.compteur { font: 700 clamp(44px, 11vw, 58px)/1 var(--f-titre); color: var(--titre); font-variant-numeric: tabular-nums; letter-spacing: 0; }
 
 /* ---------- Exercices ---------- */
 .question { font: 600 clamp(21px, 5.2vw, 26px)/1.3 var(--f-texte); color: var(--encre); text-wrap: balance; }
@@ -471,14 +472,14 @@ main:focus { outline: none; }
 .paires { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 .paires .col { display: grid; gap: 10px; align-content: start; }
 .tuile-p { appearance: none; border: 0; min-height: 62px; padding: 10px 12px; border-radius: var(--r-md); background: var(--carte); box-shadow: inset 0 0 0 1.5px var(--filet), 0 3px 0 var(--filet); font: 600 16px/1.25 var(--f-texte); color: var(--encre); transition: box-shadow .15s, background-color .15s, opacity .3s, transform .2s var(--ressort); }
-.tuile-p.mo { font: 700 18px/1.2 var(--f-moore); color: var(--titre); }
+.tuile-p.mo { font: 600 18px/1.2 var(--f-moore); color: var(--titre); }
 .tuile-p[aria-pressed="true"] { background: var(--griot-tint); box-shadow: inset 0 0 0 2px var(--griot), 0 3px 0 var(--griot); }
 .tuile-p.ok { background: var(--vert-tint); box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--vert) 40%, transparent); color: var(--vert); opacity: .6; transform: scale(.98); }
 .tuile-p.faux { box-shadow: inset 0 0 0 2px var(--terre), 0 3px 0 var(--terre); animation: secoue .4s; }
 
 .decouverte { display: grid; justify-items: center; text-align: center; gap: 14px; padding: 28px 20px; }
-.decouverte .mo { font: 700 clamp(40px, 11vw, 60px)/1.05 var(--f-moore); color: var(--titre); }
-.decouverte .fr { font: italic 500 22px/1.3 var(--f-recit); color: var(--encre); }
+.decouverte .mo { font: 700 clamp(40px, 11vw, 58px)/1.05 var(--f-moore); word-spacing: -.12em; color: var(--titre); }
+.decouverte .fr { font: 500 21px/1.3 var(--f-texte); color: var(--encre); }
 .decouverte .aide { font-size: 15px; color: var(--muet); max-width: 40ch; }
 .lecteur-rond { appearance: none; border: 0; width: 96px; height: 96px; border-radius: 50%; display: grid; place-items: center; background: var(--or); color: var(--sur-or); box-shadow: 0 0 0 8px var(--or-tint), 0 18px 32px -16px var(--or); transition: transform .25s var(--ressort); position: relative; }
 .lecteur-rond .ic { width: 34px; height: 34px; }
@@ -533,12 +534,12 @@ main:focus { outline: none; }
 .onb-art::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, color-mix(in srgb, var(--nuit) 92%, transparent) 0%, color-mix(in srgb, var(--nuit) 35%, transparent) 26%, transparent 42%, transparent 55%, var(--nuit) 100%); pointer-events: none; }
 .onb-art-haut { position: absolute; z-index: 2; top: calc(env(safe-area-inset-top, 0px) + 18px); left: 20px; display: flex; align-items: center; gap: 10px; }
 .onb-proverbe { position: absolute; z-index: 2; left: 20px; right: 20px; bottom: 40px; margin: 0; display: grid; gap: 6px; max-width: 440px; }
-.onb-proverbe p:first-child { font: italic 600 19px/1.3 var(--f-recit); color: var(--sur-nuit); }
+.onb-proverbe p:first-child { font: 500 19px/1.35 var(--f-texte); color: var(--sur-nuit); }
 .onb-proverbe p:nth-child(2) { font-size: 14px; color: var(--sur-nuit-2); }
-.onb-proverbe cite { font: normal 400 11.5px/1.3 var(--f-mono); color: var(--or-nuit); letter-spacing: .02em; }
+.onb-proverbe cite { font: normal 700 13px/1.3 var(--f-titre); color: var(--or-nuit); letter-spacing: .08em; text-transform: uppercase; word-spacing: 0; }
 .onb-texte { position: relative; z-index: 3; margin-top: -26px; border-radius: 24px 24px 0 0; background: var(--papier); padding: 28px 20px calc(28px + env(safe-area-inset-bottom, 0px)); display: grid; gap: 18px; align-content: start; }
-.onb-titre { font: 600 clamp(34px, 8.6vw, 54px)/1.04 var(--f-recit); letter-spacing: -.015em; color: var(--titre); text-wrap: balance; }
-.onb-titre em { color: var(--griot); }
+.onb-titre { font: 700 clamp(42px, 11vw, 66px)/.98 var(--f-titre); letter-spacing: .005em; word-spacing: 0; text-transform: uppercase; color: var(--titre); text-wrap: balance; }
+.onb-titre em { color: var(--griot); font-style: normal; }
 .onb-trois { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
 .onb-trois li { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 14px; align-items: start; }
 .onb-trois .pastille { width: 44px; height: 44px; border-radius: 14px; display: grid; place-items: center; background: var(--griot-tint); color: var(--titre); }
@@ -607,13 +608,13 @@ main:focus { outline: none; }
 /* ---------- Héritage ---------- */
 .heritage-hero { position: relative; overflow: hidden; border-radius: var(--r-lg); background: var(--nuit); color: var(--sur-nuit); display: grid; grid-template-columns: minmax(0, 1fr); box-shadow: var(--ombre-2); }
 .heritage-hero .txt { position: relative; z-index: 1; padding: 26px 22px 24px; display: grid; gap: 14px; align-content: end; }
-.heritage-hero h1 { font: italic 600 clamp(32px, 8vw, 50px)/1.04 var(--f-recit); letter-spacing: -.015em; text-wrap: balance; }
-.heritage-hero h1 em { color: var(--or-nuit); font-style: italic; }
+.heritage-hero h1 { font: 700 clamp(40px, 10vw, 62px)/.98 var(--f-titre); letter-spacing: .005em; word-spacing: 0; text-transform: uppercase; text-wrap: balance; }
+.heritage-hero h1 em { color: var(--or-nuit); font-style: normal; }
 .heritage-hero .chapo { color: var(--sur-nuit-2); }
 .heritage-hero .toile { position: relative; min-height: 230px; }
 .heritage-hero .toile canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
 .chiffres-or { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; padding-top: 6px; border-top: 1px solid rgba(255, 255, 255, .12); }
-.chiffres-or b { display: block; font: 700 clamp(21px, 5vw, 26px)/1.1 var(--f-titre); color: var(--or-nuit); font-variant-numeric: tabular-nums; white-space: nowrap; padding-top: 10px; }
+.chiffres-or b { display: block; font: 700 clamp(26px, 6.4vw, 34px)/1.05 var(--f-titre); color: var(--or-nuit); font-variant-numeric: tabular-nums; white-space: nowrap; padding-top: 10px; }
 .chiffres-or span { font-size: 12.5px; color: var(--sur-nuit-2); line-height: 1.3; }
 @media (min-width: 720px) { .heritage-hero { grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); } .heritage-hero .toile { min-height: 100%; } .heritage-hero .txt { padding: 34px 30px 30px; } }
 .legende-pagne { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 13px; color: var(--sur-nuit-2); }
@@ -642,20 +643,20 @@ main:focus { outline: none; }
 .registre .meta { margin-top: 2px; }
 
 .capsule { position: relative; overflow: hidden; border-radius: var(--r-lg); padding: 22px 20px; background: linear-gradient(160deg, var(--griot-tint) 0%, var(--or-tint) 100%); display: grid; gap: 12px; }
-.capsule h2 { font: italic 600 26px/1.15 var(--f-recit); color: var(--titre); }
+.capsule h2 { font: 700 30px/1.04 var(--f-titre); color: var(--titre); word-spacing: 0; }
 .capsule p { color: var(--encre-2); font-size: 15px; }
 .idees { display: flex; flex-wrap: wrap; gap: 8px; }
 
 /* ---------- Profil ---------- */
 .profil-tete { padding-top: 10px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 16px; align-items: center; }
-.avatar { width: 76px; height: 76px; border-radius: 50%; display: grid; place-items: center; font: 800 30px/1 var(--f-titre); color: var(--sur-action); background: var(--action); box-shadow: 0 0 0 4px var(--papier), 0 0 0 7px var(--or); }
+.avatar { width: 76px; height: 76px; border-radius: 50%; display: grid; place-items: center; font: 700 36px/1 var(--f-titre); color: var(--sur-action); background: var(--action); box-shadow: 0 0 0 4px var(--papier), 0 0 0 7px var(--or); }
 .niveau-carte { display: grid; gap: 10px; }
 .niveau-carte .haut { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
 .stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 @media (min-width: 640px) { .stats { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 .stat { background: var(--carte); border-radius: var(--r-md); padding: 14px; box-shadow: var(--ombre-1); display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px 10px; align-items: center; }
 .stat svg { grid-row: span 2; width: 28px; height: 28px; }
-.stat b { font: 700 20px/1 var(--f-titre); color: var(--encre); font-variant-numeric: tabular-nums; }
+.stat b { font: 700 26px/1 var(--f-titre); color: var(--encre); font-variant-numeric: tabular-nums; }
 .stat span { font-size: 12.5px; color: var(--muet); line-height: 1.25; }
 .motifs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px 10px; }
 @media (min-width: 640px) { .motifs { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
@@ -669,8 +670,8 @@ main:focus { outline: none; }
 .motif span { font-size: 11.5px; color: var(--muet); line-height: 1.25; }
 
 .solde { position: relative; overflow: hidden; border-radius: var(--r-lg); background: var(--nuit); color: var(--sur-nuit); padding: 22px 20px 26px; display: grid; gap: 6px; box-shadow: var(--ombre-2); }
-.solde .montant { font: 700 clamp(36px, 9vw, 44px)/1 var(--f-titre); letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
-.solde .montant small { font: 700 15px/1 var(--f-texte); color: var(--or-nuit); margin-left: 8px; letter-spacing: .04em; }
+.solde .montant { font: 700 clamp(44px, 11vw, 56px)/1 var(--f-titre); letter-spacing: 0; font-variant-numeric: tabular-nums; }
+.solde .montant small { font: 700 18px/1 var(--f-titre); color: var(--or-nuit); margin-left: 8px; letter-spacing: .06em; }
 .solde .sous-ligne { font-size: 14px; color: var(--sur-nuit-2); }
 .solde::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 8px; background: repeating-linear-gradient(90deg, #C9A227 0 3px, #7D3C98 3px 4px, #C9A227 4px 7px, #117864 7px 8px, #C9A227 8px 11px, #F4EFE4 11px 12px); }
 
@@ -985,7 +986,7 @@ main:focus { outline: none; }
     </section>
     <main class="onb-texte" id="vue" tabindex="-1">
       <p class="sur-titre">Archive vivante du mooré · 2026</p>
-      <h1 class="onb-titre">Le mooré de demain se tisse avec <em class="recit">nos voix</em>.</h1>
+      <h1 class="onb-titre">Le mooré de demain se tisse avec <em>nos voix</em>.</h1>
       <p class="chapo">Apprenez la langue cinq minutes par jour. Prêtez votre voix à l'archive que notre génération laissera à celles et ceux qui viennent. Chaque minute validée est payée.</p>
       <ul class="onb-trois">
         <li><span class="pastille">${ic("livre")}</span><div><b>Apprendre</b><span>Des leçons courtes, à l'oreille, avec les voix de l'archive.</span></div></li>
@@ -1433,7 +1434,7 @@ main:focus { outline: none; }
   V.capsule = () => {
     const c = S.capsule, enreg = Micro.etat === "enreg";
     return { focus: true, tete: `<header class="focus-tete"><div><button class="ic-btn" data-a="aller" data-v="heritage" aria-label="Fermer">${ic("fermer")}</button><span class="sur-titre" style="text-align:center">Message pour 2076</span><span style="width:44px"></span></div></header>`, main: `
-      <div class="etape-titre" style="text-align:center;justify-items:center"><h1 class="recit" style="font-size:clamp(30px,7.5vw,42px);line-height:1.1;color:var(--titre)">Que voulez-vous laisser à celles et ceux qui viendront ?</h1><p class="chapo">En mooré, une minute au plus. Ce message est gardé à part : il n'entre pas dans le corpus d'entraînement.</p></div>
+      <div class="etape-titre" style="text-align:center;justify-items:center"><h1 class="titre-doux">Que voulez-vous laisser à celles et ceux qui viendront ?</h1><p class="chapo">En mooré, une minute au plus. Ce message est gardé à part : il n'entre pas dans le corpus d'entraînement.</p></div>
       <div class="idees" style="justify-content:center">${["Un conseil de vie", "Une chanson d'enfance", "Le nom de votre village", "Ce qu'il ne faut pas oublier"].map(t => `<span class="badge or">${t}</span>`).join("")}</div>
       <div class="tama"><canvas id="cv-tama" aria-hidden="true"></canvas><button class="micro${enreg ? " enreg" : ""}" data-a="micro" aria-label="${enreg ? "Arrêter l'enregistrement" : "Commencer l'enregistrement"}">${ic(enreg ? "stop" : "micro")}</button></div>
       <p class="indic" aria-live="polite">${enreg ? `<span class="chrono" id="chrono">0,0 s</span><span>Prenez votre temps.</span>` : c.clip ? "<b>Message enregistré.</b> Réécoutez-le avant de le garder." : "Touchez le micro quand vous êtes prêt."}</p>
@@ -2034,7 +2035,7 @@ main:focus { outline: none; }
       const err = $("#tel-err"); if (err) err.textContent = telOk() ? "" : "Il manque des chiffres : un numéro du Burkina en compte 8.";
       const b = $("#btn-tel"); if (b) b.disabled = !telOk();
     } else if (el.id === "prenom") { S.prenom = el.value.slice(0, 30); sauver(); }
-    else if (el.id === "trad") { S.ecr.texte = el.value; const b = $("#btn-trad"); if (b) b.disabled = S.ecr.texte.trim().length < 2; }
+    else if (el.id === "trad") { S.ecr.texte = el.value.normalize("NFC"); const b = $("#btn-trad"); if (b) b.disabled = S.ecr.texte.trim().length < 2; }
   });
   window.addEventListener("popstate", () => { const id = location.hash.slice(1); if (V[id] && id !== S.ecran) aller(id, { pousser: false }); });
   let largeur = innerWidth, lgAvant = large();
